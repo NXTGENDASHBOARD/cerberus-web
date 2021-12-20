@@ -1,5 +1,5 @@
 {
-  "name": "cerebus-app",
+  "name": "cerberus-analytics-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
