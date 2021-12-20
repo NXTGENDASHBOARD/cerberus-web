@@ -1,0 +1,26 @@
+.container-fluid {
+  width: 100%;
+  padding-right: 0.938rem; // 15px
+  padding-left: 0.938rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container { 
+  padding: 0 1rem;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding-right: 0.938rem;
+    padding-left: 0.938rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// Stepper container
+.mat-stepper-horizontal {
+  .mat-horizontal-content-container {
+    overflow: hidden;
+    padding: 0;
+  }
+}

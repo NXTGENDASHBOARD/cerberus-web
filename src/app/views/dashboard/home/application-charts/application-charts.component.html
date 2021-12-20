@@ -1,0 +1,79 @@
+<div class="charts" *ngIf="dataTitle === 'All'">
+  <div class="container-1 col-1-of-2" *ngIf="dashboardCharts.length > 0">   
+    <mat-card *ngFor="let item of dashboardCharts">
+      <mat-card-title>APPLICATIONS BY FACULTY</mat-card-title>
+      <app-chart
+        [chartType]="item.ChartType"
+        [isLegend]="item.isLegend"
+        [chartDatasets]="item.chartDatasets"
+        [chartLabels]="item.chartLabels"
+        [chartColors]="item.chartColors"
+        [chartOptions]="item.chartOptions"
+        (chartClickedEvent)="chartClicked($event)"
+      >
+      </app-chart>
+    </mat-card>
+  </div>
+  <div class="container-2 col-1-of-2" *ngIf="dashboardContainer2Charts.length > 0">
+    <mat-card *ngFor="let item of dashboardContainer2Charts">
+      <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+       <app-chart
+      [chartType]="item.ChartType"
+      [isLegend]="item.isLegend"
+      [chartDatasets]="item.chartDatasets"
+      [chartLabels]="item.chartLabels"
+      [chartColors]="item.chartColors"
+      [chartOptions]="item.chartOptions"
+      (chartClickedEvent)="chartClicked($event)"
+    >
+    </app-chart>
+    </mat-card>
+  </div>
+  <div class="container-3 col-1-of-3" *ngIf="dashboardContainer3Charts.length > 0">
+    <mat-card *ngFor="let item of dashboardContainer3Charts">
+         <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+         <app-chart
+        [chartType]="item.ChartType"
+        [isLegend]="item.isLegend"
+        [chartDatasets]="item.chartDatasets"
+        [chartLabels]="item.chartLabels"
+        [chartColors]="item.chartColors"
+        [chartOptions]="item.chartOptions"
+        (chartClickedEvent)="chartClicked($event)"
+      >
+      </app-chart>
+     </mat-card>
+  </div>
+
+</div>
+
+<div class="faculty-charts" *ngIf="dataTitle !== 'All'">     
+  <mat-card>
+    <mat-card-title>{{facultyDashboardCharts[0].chartDatasets[0].label}}</mat-card-title>
+    <app-chart
+      [chartType]="'bar'"
+      [isLegend]="true"
+      [chartDatasets]="facultyDashboardCharts[0].chartDatasets"
+      [chartLabels]="facultyDashboardCharts[0].chartLabels"
+      [chartColors]="facultyDashboardCharts[0].chartColors"
+      [chartOptions]="facultyDashboardCharts[0].chartOptions"
+      (chartClickedEvent)="chartClicked($event)"
+    >
+    </app-chart>
+  </mat-card>
+  <div class="container-3 col-1-of-3">
+    <mat-card *ngFor="let item of dashboardContainer3Charts">
+      <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+      <app-chart
+     [chartType]="item.ChartType"
+     [isLegend]="item.isLegend"
+     [chartDatasets]="item.chartDatasets"
+     [chartLabels]="item.chartLabels"
+     [chartColors]="item.chartColors"
+     [chartOptions]="item.chartOptions"
+     (chartClickedEvent)="chartClicked($event)"
+   >
+   </app-chart>
+  </mat-card>
+  </div>
+</div>

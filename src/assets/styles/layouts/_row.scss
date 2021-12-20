@@ -1,0 +1,60 @@
+@import "../variables/index";
+
+.row {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+
+  div.inline {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0;
+    left: 0;
+    width: auto;
+    transition: left cubic-bezier(0.16, 1, 0.29, 0.99) 0.667s;
+    margin: 0 auto;
+    .card {
+      font-size: 15px;
+      line-height: 20px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 1rem;
+      text-align: center;
+      word-wrap: break-word;
+      background: none;
+      border: none;
+      img {
+        width: 5rem;
+        margin: 1rem 0;
+      }
+      div {
+        font-weight: 600;
+        margin: auto;
+        max-height: 60px;
+        line-height: 20px;
+        width: 200px;
+        overflow: hidden;
+        white-space: normal;
+        margin-top: -4px;
+        position: relative;
+        text-align: center;
+        white-space: normal;
+        max-width: 200px;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    div.inline {
+      display: block;
+      white-space: inherit;
+
+      .card {
+        margin: 0 6rem;
+      }
+    }
+  }
+}

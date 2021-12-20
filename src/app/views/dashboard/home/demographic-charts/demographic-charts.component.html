@@ -1,0 +1,54 @@
+
+<div class="charts col-1-of-3">
+    <mat-card>
+        <mat-card-title>Applicant race</mat-card-title>
+        <mat-card-content>
+            <div style="display: block">
+                <canvas mdbChart
+                    [chartType]="chartType"
+                    [datasets]="chartDatasets"
+                    [labels]="chartLabels"
+                    [colors]="chartColors"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Applicant gender</mat-card-title>
+        <mat-card-content>
+            <div style="display: block">
+                <canvas mdbChart
+                    [chartType]="chartType"
+                    [datasets]="gChartDatasets"
+                    [labels]="gChartLabels"
+                    [colors]="gChartColors"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Applicant location</mat-card-title>
+        <mat-card-content>
+            <div style="display: block">
+                <canvas mdbChart
+                    [chartType]="dChartType"
+                    [datasets]="dChartDatasets"
+                    [labels]="dChartLabels"
+                    [colors]="dChartColors"
+                    [options]="chartOptions"
+                    [legend]="true"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+                </canvas>
+              </div>
+        </mat-card-content>
+    </mat-card>
+</div>

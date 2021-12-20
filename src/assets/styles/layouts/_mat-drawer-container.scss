@@ -1,0 +1,20 @@
+@import "../variables/index";
+.mat-drawer {
+  background-color: var(--mat-drawer-bg);
+  color: var(--mat-drawer-color);
+
+  .mat-toolbar {
+    color: inherit;
+  }
+
+  .mat-list-base .mat-list-item {
+    color: inherit;
+  }
+  .active-link {
+    // TODO Implement active route styles.
+  }
+ 
+}
+.mat-drawer-container {
+  background-color: var(--mat-drawer-container-bg);
+}

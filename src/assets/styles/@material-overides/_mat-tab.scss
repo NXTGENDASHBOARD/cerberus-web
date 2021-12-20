@@ -1,0 +1,23 @@
+.mat-tab-labels {
+  display: flex;
+  border: solid 1px $secondary;
+}
+
+// disable the bottom bar 
+.mat-ink-bar {
+  display: none;
+}
+
+.mat-tab-label {
+    border-right: solid 2px $secondary;
+    opacity: 1 !important;
+    color: var(--mat-tab-label-color);
+    &[aria-selected="true"]{
+        background-color: $secondary;
+        color: $cloud;
+    }
+}
+
+.mat-tab-header-pagination-chevron {
+    border-color: $secondary;
+}

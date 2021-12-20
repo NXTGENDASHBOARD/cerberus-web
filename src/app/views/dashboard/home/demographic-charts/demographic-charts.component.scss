@@ -1,0 +1,18 @@
+@import "../../../../../assets/styles/index";
+
+.charts {
+  .mat-card {
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    .mat-card-title {
+      color: $grey;
+      font-weight: 400;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+}

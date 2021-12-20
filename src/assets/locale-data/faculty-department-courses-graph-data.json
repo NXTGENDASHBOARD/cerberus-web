@@ -1,0 +1,1058 @@
+[
+  {
+    "displayOrder":"1",
+    "facultyName": "Sciences",
+    "departments": [
+      {
+        "name": "Engineering"
+      },
+      {
+        "name": "Biology"
+      },
+      {
+        "name": "Architecture"
+      },
+      {
+        "name": "Research"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ELE0122",
+            "CourseName": "Electrical Engineering",
+            "Department": "Engineering",
+            "ValidApplications": 300,
+            "InvalidApplications": 65,
+            "PartialyValidApplications": 25,
+            "AllApplications": 390
+          },
+          {
+            "CourseId": "MEC0122",
+            "CourseName": "Mechanical Engineering",
+            "Department": "Engineering",
+            "ValidApplications": 300,
+            "InvalidApplications": 200,
+            "PartialyValidApplications": 150,
+            "AllApplications": 650
+          },
+          {
+            "CourseId": "CIV0122",
+            "CourseName": "Civil Engineering",
+            "Department": "Engineering",
+            "ValidApplications": 250,
+            "InvalidApplications": 100,
+            "PartialyValidApplications": 50,
+            "AllApplications": 400
+          },
+          {
+            "CourseId": "CIV0122",
+            "CourseName": "Civil Engineering",
+            "Department": "Engineering",
+            "ValidApplications": 250,
+            "InvalidApplications": 100,
+            "PartialyValidApplications": 50,
+            "AllApplications": 400
+          },
+          {
+            "CourseId": "CIV0122",
+            "CourseName": "Civil Engineering",
+            "Department": "Engineering",
+            "ValidApplications": 250,
+            "InvalidApplications": 100,
+            "PartialyValidApplications": 50,
+            "AllApplications": 400
+          },
+          {
+            "CourseId": "CIV0122",
+            "CourseName": "Civil Engineering",
+            "Department": "Engineering",
+            "ValidApplications": 250,
+            "InvalidApplications": 100,
+            "PartialyValidApplications": 50,
+            "AllApplications": 400
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": 75
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": 75
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": 350
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": 75
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": 250
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": 300
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": 50
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"2",
+    "facultyName": "Commerce",
+    "departments": [
+      {
+        "name": "Accounting"
+      },
+      {
+        "name": "Information Technology"
+      },
+      {
+        "name": "Financial Information Systems"
+      },
+      {
+        "name": "Business Economics"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Account Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Accounting",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Account Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Accounting",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"3",
+    "facultyName": "Law",
+    "departments": [
+      {
+        "name": "Law Department 1"
+      },
+      {
+        "name": "Law Department 2"
+      },
+      {
+        "name": "Law Department 3"
+      },
+      {
+        "name": "Law Department 4"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Law Managment",
+            "Department": "Law Department 1",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Law Management",
+            "Department": "Law Department 1",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Law Prep",
+            "Department": "Law Department 1",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Law Prep Management",
+            "Department": "Law Department 1",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Law Department 1",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Law Department 1",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"4",
+    "facultyName": "Management",
+    "departments": [
+      {
+        "name": "Business Management"
+      },
+      {
+        "name": "Human Resources"
+      },
+      {
+        "name": "Public Relations"
+      },
+      {
+        "name": "Community Management"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Business Managementt",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Business Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Business Management",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Account Management",
+            "Department": "Business Management",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Business Management",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Business Management",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"5",
+    "facultyName": "Engineering",
+    "departments": [
+      {
+        "name": "Electrical Engineering"
+      },
+      {
+        "name": "Civil Engineering"
+      },
+      {
+        "name": "Mechenical  Engineering"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Current Management",
+            "Department": "Electrical Engineering",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Electricity Management",
+            "Department": "Electrical Engineering",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Electrical Engineering",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Business Management",
+            "Department": "Electrical Engineering",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Drawing Management",
+            "Department": "Electrical Engineering",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Electrical Engineering",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"6",
+    "facultyName": "Health Sciences",
+    "departments": [
+      {
+        "name": "Doctor in Medicine"
+      },
+      {
+        "name": "Nursing"
+      },
+      {
+        "name": "Caretaker Commisioner"
+      },
+      {
+        "name": "Pharmacist"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Health Management",
+            "Department": "Doctor in Medicine",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Body Management",
+            "Department": "Doctor in Medicine",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Brain Studies",
+            "Department": "Doctor in Medicine",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Tissue Management",
+            "Department": "Doctor in Medicine",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Foot Management",
+            "Department": "Doctor in Medicine",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Diet",
+            "Department": "Doctor in Medicine",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"7",
+    "facultyName": "Humanities",
+    "departments": [
+      {
+        "name": "Human studies"
+      },
+      {
+        "name": "History"
+      },
+      {
+        "name": "Economics"
+      },
+      {
+        "name": "Travel & Tourism"
+      }
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Human behavior Management",
+            "Department": "Human studies",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Human studies",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Human studies",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Account Management",
+            "Department": "Human studies",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Human studies",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Human studies",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  },
+  {
+    "displayOrder":"8",
+    "facultyName": "Environmental Studies",
+    "departments": [
+      {
+        "name": "Zoology"
+      },
+      {
+        "name": "Animal Technology"
+      },
+      {
+        "name": "Animal Nutrition"
+      },
+      {
+        "name": "Hoticulture"
+      },
+      {
+        "name": "Forestation"
+      } 
+    ],
+    "dataTypes": [
+      {
+        "dataTypeName": "ApplicationsByCourse",
+        "label": "Applications by course",
+        "dataSet": [
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Account Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Accounting",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          },
+          {
+            "CourseId": "ACC0122",
+            "CourseName": "Account Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "65",
+            "PartialyValidApplications": "25",
+            "AllApplications": "390"
+          },
+          {
+            "CourseId": "Economics0122",
+            "CourseName": "Economics Management",
+            "Department": "Accounting",
+            "ValidApplications": "300",
+            "InvalidApplications": "200",
+            "PartialyValidApplications": "150",
+            "AllApplications": "650"
+          },
+          {
+            "CourseId": "TAX0122",
+            "CourseName": "Taxation",
+            "Department": "Accounting",
+            "ValidApplications": "250",
+            "InvalidApplications": "100",
+            "PartialyValidApplications": "50",
+            "AllApplications": "400"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByRace",
+        "label": "Applicant Race",
+        "dataSet": [
+          {
+            "type": "Race",
+            "label": "White",
+            "value": "100"
+          },
+          {
+            "type": "Race",
+            "label": "Coloured",
+            "value": "50"
+          },
+          {
+            "type": "Race",
+            "label": "Black",
+            "value": "350"
+          },
+          {
+            "type": "Race",
+            "label": "Indian",
+            "value": "75"
+          },
+          {
+            "type": "Race",
+            "label": "Other",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "dataTypeName": "ApplicationsByGender",
+        "label": "Applicant Gender",
+        "dataSet": [
+          {
+            "type": "Gender",
+            "label": "Male",
+            "value": "325"
+          },
+          {
+            "type": "Gender",
+            "label": "Female",
+            "value": "225"
+          },
+          {
+            "type": "Gender",
+            "label": "Other",
+            "value": "50"
+          } 
+        ]
+      }
+    ]
+  }
+]

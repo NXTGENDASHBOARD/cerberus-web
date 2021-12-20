@@ -1,0 +1,31 @@
+@import "../variables/index";
+
+.mat-toolbar {
+  &.mat-primary {
+    text-align: center;
+    height: 12.5rem;
+    display: grid;
+    h1 {
+      font-size: 2.5rem;
+
+      span {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {  
+    &.mat-primary {
+      h1 {
+        font-size: 1.85rem;  
+        span {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,37 @@
+// dark theme here
+html[data-theme="dark"] {
+
+  // variables
+  --bg: #2c3a47;
+  --bg-panel: #3e4852;
+  --color-heading: #3742fa;
+  --color-text: #ecf0f1;
+
+  --disabled-bg: #3e4852;
+  --disabled-color: #95a5a6;
+
+  --caption-color: #95a5a6;
+
+  --form-field-bg: #3e4852;
+  --form-field-label-color: #95a5a6;
+
+   // Side nav colors
+   --mat-drawer-bg: #5F9547;
+   --mat-drawer-color: #bdc3c7;
+
+   --mat-drawer-container-bg: #2c3a47;
+
+   
+    // Card colors
+    --mat-card-bg:#3e4852;
+    --mat-card-color:#ecf0f1;
+
+    // Font colors
+    --container-fluid-h1-color:  #ecf0f1;
+
+    // Mat toolbar
+    --mat-toolbar-nav-item-color: #ecf0f1;
+
+    // Mat tab 
+  --mat-tab-label-color: #ecf0f1;
+}

@@ -1,0 +1,24 @@
+@import "../../../../assets/styles/index";
+
+$bg-overlay: #11455b98;
+
+.mat-toolbar {
+  &.mat-primary {
+  }
+
+  &.home-bg {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url("../../../../assets/images/dashboard-home-bg.png");
+  }
+}
+
+.container-fluid {
+  margin: 2rem 0;
+
+  h1 {
+    font-size: 2.188rem;
+    font-weight: 600;
+    color: var(--container-fluid-h1-color);
+    margin: 1rem 0;
+   }
+}

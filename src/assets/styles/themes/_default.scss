@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  --bg: #ffffff;
+  --bg-panel: #ecf0f1;
+  --color-heading: hsl(237, 95%, 60%);
+  --color-text: #2c3a47;
+
+  --disabled-bg: #ecf0f1;
+  --disabled-color: #95a5a6;
+
+  --caption-color: #95a5a6;
+  --form-field-bg: #ffffff;
+  --form-field-label-color: #2c3a47;
+
+  // Side nav colors
+  --mat-drawer-bg: #5F9547;
+  --mat-drawer-color: #ecf0f1;
+
+  --mat-drawer-container-bg: #fafafa;
+
+  // Card colors
+  --mat-card-bg: #ffffff;
+  --mat-card-color: #2c3a47;
+
+  // Font colors
+  --container-fluid-h1-color: #5F9547;
+
+  // Mat toolbar
+  --mat-toolbar-nav-item-color: #5F9547;
+
+  // Mat tab 
+  --mat-tab-label-color: #5F9547;
+}
