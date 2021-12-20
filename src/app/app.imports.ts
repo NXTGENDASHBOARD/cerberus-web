@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { NgxGaugeModule } from 'ngx-gauge';
+import { HttpClientModule } from "@angular/common/http";
 
 export const APP_MODULES = [
     CommonModule,
@@ -14,7 +15,8 @@ export const APP_MODULES = [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    NgxGaugeModule
+    NgxGaugeModule,
+    HttpClientModule
 ]
 
 

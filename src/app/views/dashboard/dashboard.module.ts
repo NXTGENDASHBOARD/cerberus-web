@@ -8,9 +8,7 @@ import { ChartComponent } from './home/application-charts/chart/chart.component'
    
 @NgModule({
   declarations: [
-    ...declarations,
-
- 
+    ...declarations, 
    ],
   imports: [
     IMPORT_MODULES,

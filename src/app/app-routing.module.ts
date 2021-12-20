@@ -1,12 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [{ path: '', loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule) },
-{ path: 'applications', loadChildren: () => import('./views/applications/applications.module').then(m => m.ApplicationsModule) },
-{ path: 'short-list', loadChildren: () => import('./views/short-list/short-list.module').then(m => m.ShortListModule) }];
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./views/account/account.module').then((m) => m.AccountModule),
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./views/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
+  {
+    path: 'applications',
+    loadChildren: () =>
+      import('./views/applications/applications.module').then(
+        (m) => m.ApplicationsModule
+      ),
+  },
+  {
+    path: 'short-list',
+    loadChildren: () =>
+      import('./views/short-list/short-list.module').then(
+        (m) => m.ShortListModule
+      ),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

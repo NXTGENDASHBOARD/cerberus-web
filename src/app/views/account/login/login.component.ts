@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         .subscribe((data: any) => {
           this.loading = !this.loading;
           if (data != null && data.token) {
-            this.router.navigate(['success']);
+            this.router.navigate(['home']);
           } else {
             this.error = data;
           }
