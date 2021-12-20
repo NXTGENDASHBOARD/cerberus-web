@@ -1,0 +1,67 @@
+@import "../variables/index";
+
+button {
+  border: none;
+  width: 100%;
+  .mat-button-wrapper {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  &.primary {
+    background-color: $primary;
+    color: #fafafa;
+    text-transform: uppercase;
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: $primary;
+    border: solid 2px $primary;
+  }
+
+  &:hover {
+    box-shadow: 10px 3px 24px -11px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 3px 24px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 3px 24px -11px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0 !important;
+  }
+}
+// disabled button
+button:disabled,
+button[disabled] {
+  background-color: $cloud;
+  color: $grey;
+  pointer-events: none;
+}
+
+.carousel-button {
+  //   position: absolute;
+  z-index: 999;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+// Anchor button
+a {
+  font-weight: 600;
+
+  &.button {
+    text-transform: uppercase;
+    .mat-button-wrapper {
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+    &.primary {
+      background-color: $primary;
+      color: #fafafa;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

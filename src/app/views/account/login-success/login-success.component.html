@@ -1,0 +1,11 @@
+<div class="login-success-bg"></div>
+<div class="container">
+  <h1 *ngIf="account.account">
+    Hello! {{account.account.fullName}}
+    <span>Our website is under construction</span>
+    <span>check again soon! bye... :)</span>
+  </h1>
+  <div class="logout">
+    <button mat-button class="button primary" (click)="logout()">Logout</button>
+  </div>
+</div>

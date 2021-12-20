@@ -1,0 +1,160 @@
+.account {
+    .container {
+        min-height: 100vh;
+        overflow-y: scroll;
+
+        .content {
+            padding: 5rem 2rem;
+        }
+
+        .header {
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: left;
+            padding: 1rem;
+            color: $cloud;
+            margin-top: 25rem;
+            h1.heading {
+                padding: 0;
+                font-size: 2.222rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                span {
+                    width: auto;
+                    height: 50px;
+                    position: relative;
+                    z-index: 1;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0px;
+                        height: 1px;
+                        width: 15%; /* percentage of the element width*/
+                        border-bottom: 4px solid $primary;
+                        margin-top: 1.2em; /*move the border below the text*/
+                        border-radius: 10rem;
+                    }
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+
+            @media only screen and (max-width: 600px) {
+                margin-top: 0rem;
+                h1.heading {
+                    line-height: 3rem;
+                    font-size: 2rem;
+                    margin-bottom: 0;
+                    span {
+                        &:before {
+                            width: 35%; /* percentage of the element width*/
+                            border-bottom: 3px solid $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-container {
+            background: $white;
+            max-height: 100vh;
+            overflow-y: scroll;
+            margin: 0 4rem;
+            display: block;
+            padding: 1.25rem;
+            padding-top: 1rem;
+            padding-bottom: 0.8rem;
+            margin-top: 6.25rem;
+            border-radius: 0.5rem;
+
+            .form-header {
+                text-align: center;
+                margin-top: 40px;
+                margin-bottom: 32px;
+                h1 {
+                    text-transform: capitalize;
+                }
+            }
+            .third-party {
+                margin-bottom: 24px;
+            }
+            .google {
+                background: $blue;
+                color: $white;
+                text-transform: uppercase;
+                .mat-button-wrapper {
+                    font-weight: 600;
+                    font-size: 0.85rem;
+                }
+            }
+
+            .divider {
+                /* No need to absolute positioning or span elements! Fully Responsive and the lines never overflow the container */
+                h1 {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    display: grid;
+                    grid-template-columns: 1fr auto 1fr;
+                    grid-template-rows: 1.25rem 0;
+                    grid-gap: 1.25rem;
+                    font-size: 1rem;
+                    margin-bottom: 0;
+                }
+
+                h1:after,
+                h1:before {
+                    content: " ";
+                    display: block;
+                    border-bottom: 0.125rem solid $grey;
+                }
+            }
+
+            .term-conditions {
+                text-align: center;
+                font-size: 15px;
+                p {
+                    margin: 0;
+                    font-weight: 400;
+                }
+                a {
+                    font-weight: 400;
+                }
+            }
+
+            .account-cta {
+                margin: 1rem 0;
+                text-align: center;
+                p {
+                    margin: 0;
+                    display: inline;
+                    margin-right: 0.25rem;
+                }
+                a {
+                    &.link {
+                        text-decoration: none;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+               
+                margin: 0;
+                margin-top: 0;
+                margin-bottom: .5rem;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            padding: 0;
+        }
+    }
+}
