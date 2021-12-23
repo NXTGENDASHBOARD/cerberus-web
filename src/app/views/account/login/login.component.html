@@ -1,44 +1,64 @@
-<div class="account-bg"></div>
-<div class="bg-form">
-  <div class="welcome">
-    <h1>
-      CERBERUS <span>Applications management system</span>
-    </h1>
-  </div>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <div class="form-input">
-            <mat-form-field appearance="outline">
-              <input matInput type="text" formControlName="email"
-                [ngClass]="{ 'is-invalid': f.email.errors && f.email.touched }" />
-              <mat-error *ngIf="f.email.errors && f.email.touched" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Email is required</div>
-              </mat-error>
-            </mat-form-field>
-          </div>
+
+
+
+
+<div id="bg-image">
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+
+        <span class="navbar-text">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link">Do you have a profile?</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-success">Request Access</button>
+                </li>
+              </ul>
+        </span>
+        
+      </div>
+    </div>
+  </nav>
+<div class="center">
+  <form class="form-signin" [formGroup]="myForm">
+    <p><i>Your application management system</i></p>
+    <br/><br/>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+      </div>
+     
+      <input type="text" class="form-control" formControlName="staffNumber" placeholder="Staff Number" aria-label="Staff Number" aria-describedby="basic-addon1" [ngClass]="{ 'is-invalid': f.staffNumber.errors && f.staffNumber.touched }">
+      <!-- <div *ngIf="f.staffNumber.touched && f.staffNumber.invalid" class="alert alert-danger">
+        <div *ngIf="f.staffNumber.required">Password is required.</div>
+    </div> -->
+    </div>
+
+      <div class="input-group  mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2"><i class="fas fa-lock"></i></span>
         </div>
-        <div class="form-group">
-          <label class="form-label">Password</label>
-          <div class="form-input">
-            <mat-form-field appearance="outline">
-              <input matInput type="password" formControlName="password"
-                [ngClass]="{ 'is-invalid': f.password.errors && f.password.touched }" />
-              <mat-error *ngIf="f.password.errors && f.password.touched" class="invalid-feedback">
-                <div *ngIf="f.password.errors.required">Password is required</div>
-              </mat-error>
-            </mat-form-field>
-          </div>
-        </div>
-        <br>
-        <div class="form-group form-actions">
-          <button mat-button class="button primary" [disabled]="!form.valid">
-            <span *ngIf="loading">Logging in...</span>
-            <span *ngIf="!loading">Login</span>            
-          </button>
-        </div>
-        <div class="form-group form-errors">
-          <p>{{error}}</p>
-        </div>
-      </form>
+        <input type="text" aria-label="Pin" placeholder="Pin" formControlName="pin" class="form-control" aria-describedby="basic-addon2" [ngClass]="{ 'is-invalid': f.pin.errors && f.pin.touched }">
+        <!-- <div *ngIf="f.pin.touched && f.pin.invalid" class="alert alert-danger">
+          <div *ngIf="f.pin.required">Password is required.</div>
+      </div> -->
+      </div>
+      <br/>
+      <div class="input-group">
+        <button class="btn btn-login" type="button" (click)="onSubmit()" [disabled]="!myForm.valid" *ngIf="!loading"><b>LOG IN</b></button>
+        <button class="btn btn-login" type="button" *ngIf="loading"><b>Logging in...</b></button>
+      </div>
+      <div class="form-group form-errors">
+        <p>{{error}}</p>
+      </div>
+    </form>
 </div>
+
+</div> 
