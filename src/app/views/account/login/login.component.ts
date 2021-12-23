@@ -45,13 +45,12 @@ export class LoginComponent implements OnInit {
         .login(this.f.staffNumber.value, this.f.pin.value)
         .subscribe((data: any) => {
           this.loading = !this.loading;
-          
-          
+
           if (data != null) {
             const account = data as Account;
             sessionStorage.setItem('Account', JSON.stringify(account));
             console.table(account);
-            this.router.navigate(['home']);
+            this.router.navigate(['analytics']);
           } else {
             this.error = data;
           }

@@ -18,6 +18,20 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
       },
+      {
+        path: 'applications',
+        loadChildren: () =>
+          import('../applications/applications.module').then(
+            (m) => m.ApplicationsModule
+          ),
+      },
+      {
+        path: 'short-list',
+        loadChildren: () =>
+        import('../short-list/short-list.module').then(
+          (m) => m.ShortListModule
+        ),
+      }
     ],
   },
 ];
