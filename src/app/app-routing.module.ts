@@ -8,7 +8,7 @@ const routes: Routes = [
       import('./views/account/account.module').then((m) => m.AccountModule),
   },
   {
-    path: 'home',
+    path: 'analytics',
     loadChildren: () =>
       import('./views/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
