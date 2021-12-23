@@ -1,4 +1,5 @@
 import { RoleEnum } from "../shared";
+import { Role } from "./role.model";
  
 export class Account {
     id: string;
@@ -13,4 +14,9 @@ export class Account {
     jwtToken?: string;
   
 
-}
+    names?: string;
+    surname?: string;
+    status?: string;
+    roles: Role[];
+ }
+
