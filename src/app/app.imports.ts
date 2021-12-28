@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { NgxGaugeModule } from 'ngx-gauge';
 import { HttpClientModule } from "@angular/common/http";
+import { NgApexchartsModule } from "ng-apexcharts";
+
 
 export const APP_MODULES = [
     CommonModule,
@@ -16,7 +18,8 @@ export const APP_MODULES = [
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     NgxGaugeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgApexchartsModule
 ]
 
 

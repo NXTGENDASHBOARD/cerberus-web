@@ -182,7 +182,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     };
 
     this.dashboardCharts.push(barGraph);
-    this.dashboardCharts.push(doughnutGraph);
+   // this.dashboardCharts.push(doughnutGraph);
   }
 
   generateApplicationsContainer2ChartDate() {

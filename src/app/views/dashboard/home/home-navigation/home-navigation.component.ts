@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class HomeNavigationComponent implements OnInit {
   tabs = [
-    'All',
+    'Analytics',
     'Sciences',
     'Commerce',
     'Law',
@@ -17,6 +17,7 @@ export class HomeNavigationComponent implements OnInit {
     'Health Sciences',
     'Humanities',
     'Environmental Studies',
+    
   ];
   selected = new FormControl(0);
   @Output() selectedFaculty = new EventEmitter<any>();
