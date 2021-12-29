@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as d3 from "d3";
+import { ApplicationService } from 'src/app/_services/application/application.service';
 
 @Component({
   selector: 'app-gauge-chart',
@@ -8,11 +9,19 @@ import * as d3 from "d3";
 })
 export class GaugeChartComponent implements OnInit {
   gaugemap = {};
-  constructor() { }
+  public applications:any = [];
+  constructor(private applicationServive:ApplicationService) { }
     ngOnInit() {
     this.draw();
+    this.getApps();
   }
-
+getApps(){
+  this.applicationServive.getApplications().subscribe(x =>{
+    console.log(x);
+     this.applications = x;
+     this.applications = this.applications.length
+  });
+}
   draw() {
      var self:any = this;
     var gauge = function (container:any, configuration:any) {
@@ -113,7 +122,6 @@ export class GaugeChartComponent implements OnInit {
           .attr('class', 'gauge')
           .attr('width', 500)
           .attr('height', config.clipHeight)
-          .attr('viewBox','')
           .attr('xmlns','http://www.w3.org/2000/svg');
 
         var centerTx = centerTranslation();

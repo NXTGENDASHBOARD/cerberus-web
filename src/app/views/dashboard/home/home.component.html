@@ -8,7 +8,7 @@
 <app-home-navigation (selectedFaculty)="onSelectedFaculty($event)"></app-home-navigation>
 <div class="container-fluid">
   <div class="all" *ngIf="datatitle">
-    <h1>{{datatitle}} Applications Overview</h1>
+    <h1>Applications Analytics</h1>
     <app-application-charts [dataTitle]="datatitle" [dashboardDataModel]="currentModel"></app-application-charts>
   </div>
 </div>
