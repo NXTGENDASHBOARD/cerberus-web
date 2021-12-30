@@ -28,20 +28,14 @@ export class AccountService {
   }
 
   // Gives the user access to login to our application.
-  login(email: string, password: string) {
+  login(staffNumber: string, pin: string) {
     return this.http
       .post<any>(
-        `${baseUrl}/login`,
-        { email, password },
+        `${baseUrl}/itslogin`,
+        { staffNumber, pin },
         { withCredentials: true }
-      )
-      .pipe(
-        map((account) => {
-          this.accountSubject.next(account);
-          this.startRefreshTokenTimer();
-          return account;
-        })
       );
+   
   }
 
   // Logs the user out of our application stops the refresh timer and navigates to the account landing page(Login).
@@ -56,11 +50,10 @@ export class AccountService {
   // Refreshes the token to ensure that a user in a session is logged in.
   refreshToken() {
     return this.http
-      .post<any>(`${baseUrl}/refresh-token`, {}, { withCredentials: true })
+      .post<Account>(`${baseUrl}/refresh-token`, {}, { withCredentials: true })
       .pipe(
         map((account) => {
           this.accountSubject.next(account);
-          this.startRefreshTokenTimer();
           return account;
         })
       );
@@ -101,14 +94,14 @@ export class AccountService {
   }
 
   // Removes the record (best practise is to do a Soft-Delete)
-  delete(id: string) {
-    return this.http.delete(`${baseUrl}/${id}`).pipe(
-      finalize(() => {
-        // auto logout if the logged in account was deleted
-        if (id === this.accountValue.id) this.logout();
-      })
-    );
-  }
+  // delete(id: string) {
+  //   return this.http.delete(`${baseUrl}/${id}`).pipe(
+  //     finalize(() => {
+  //       // auto logout if the logged in account was deleted
+  //       if (id === this.accountValue.id) this.logout();
+  //     })
+  //   );
+  // }
 
   // Private Helper methods (can only be used within this object)
   private refreshTokenTimeout: any;
