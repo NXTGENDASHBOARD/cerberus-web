@@ -35,6 +35,20 @@
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-width: 960px) {
+  .bottom-left {
+    position: absolute;
+    bottom: 156px;
+    left: 48px;
+  }
+  /* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 155px;
+    right: 170px;
+  }
+}
+
 
 //   .centered {
 //     position: absolute;

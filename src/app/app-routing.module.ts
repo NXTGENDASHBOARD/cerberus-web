@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+  //   path: '',
+  //   loadChildren: () =>
+  //     import('./views/account/account.module').then((m) => m.AccountModule),
+  // },
+  // {
     path: '',
-    loadChildren: () =>
-      import('./views/account/account.module').then((m) => m.AccountModule),
-  },
-  {
-    path: 'home',
     loadChildren: () =>
       import('./views/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
