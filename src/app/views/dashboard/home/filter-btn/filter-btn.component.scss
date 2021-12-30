@@ -27,17 +27,12 @@
     border: 1px grey solid;
     border-bottom-left-radius: 50px;
     border-right: none;
+    border-top: none;
+    border-bottom: none;
    
 
 }
 .nav-pills .nav-link:active{
-    color: #84A59D;
-    border-top-left-radius: 50px;
-    border: 1px grey solid;
-    border-bottom-left-radius: 50px;
-    border-right: none;
-}
-.nav-pills .nav-link:hover{
     color: #84A59D;
     border-top-left-radius: 50px;
     border: 1px grey solid;

@@ -36,19 +36,23 @@
       </div>
      
       <input type="text" class="form-control" formControlName="staffNumber" placeholder="Staff Number" aria-label="Staff Number" aria-describedby="basic-addon1" [ngClass]="{ 'is-invalid': f.staffNumber.errors && f.staffNumber.touched }">
-      <!-- <div *ngIf="f.staffNumber.touched && f.staffNumber.invalid" class="alert alert-danger">
-        <div *ngIf="f.staffNumber.required">Password is required.</div>
-    </div> -->
+      
+    <div *ngIf="f.staffNumber.errors &&(f.staffNumber.touched || f.staffNumber.dirty)" class="aler alert-danger">
+      Staff Number is required
+    </div>
     </div>
 
       <div class="input-group  mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon2"><i class="fas fa-lock"></i></span>
         </div>
-        <input type="text" aria-label="Pin" placeholder="Pin" formControlName="pin" class="form-control" aria-describedby="basic-addon2" [ngClass]="{ 'is-invalid': f.pin.errors && f.pin.touched }">
-        <!-- <div *ngIf="f.pin.touched && f.pin.invalid" class="alert alert-danger">
-          <div *ngIf="f.pin.required">Password is required.</div>
-      </div> -->
+        <input type="text" aria-label="Pin" placeholder="Pin" formControlName="pin" class="form-control" aria-describedby="basic-addon2" [ngClass]="{ 'is-invalid': f.pin.errors && f.pin.touched }" id="pin" required>
+      <div *ngIf="f.pin.errors &&(f.pin.touched || f.pin.dirty)" class="aler alert-danger">
+        Pin is required
+      </div>
+
+      
+
       </div>
       <br/>
       <div class="input-group">
