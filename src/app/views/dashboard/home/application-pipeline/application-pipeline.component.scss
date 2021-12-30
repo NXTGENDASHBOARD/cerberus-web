@@ -34,10 +34,10 @@
       text-align: center;
   }
   .mat-card {
-     border-radius: 20px;
+    // border-radius: 20px;
    //  width: 80%;
      text-align:center;
-     margin: 0 auto;
+    // margin: 0 auto;
  }
  .box{
     box-sizing: border-box;
@@ -53,4 +53,11 @@
     right: 27px;
     font-size: 12px;
 }
-  
+.col-form-label{
+  background-color: grey;
+  color: white;
+}
+.navbar-brand{
+  color: #84A59D !important;
+  text-transform: uppercase;
+}
