@@ -1,6 +1,6 @@
 .mat-tab-labels {
   display: flex;
-  border: solid 1px $secondary;
+  border: solid 1px grey;
 }
 
 // disable the bottom bar 
@@ -9,15 +9,15 @@
 }
 
 .mat-tab-label {
-    border-right: solid 2px $secondary;
+    border-right: solid 2px grey;
     opacity: 1 !important;
     color: var(--mat-tab-label-color);
     &[aria-selected="true"]{
-        background-color: $secondary;
+        background-color: grey;
         color: $cloud;
     }
 }
 
 .mat-tab-header-pagination-chevron {
-    border-color: $secondary;
+    border-color: grey;
 }

@@ -4,6 +4,7 @@ import { APP_COMPONENTS, APP_MODULES } from './app.imports';
 import { SHARED_MODULES } from './shared/shared.import';
 import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 import { ThemeService } from './_services';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { ThemeService } from './_services';
    ],
   imports: [
     APP_MODULES,
-    SHARED_MODULES
+    SHARED_MODULES,NgApexchartsModule
   ],
   providers: [ThemeService, 
     // TODO: When we get to tokenization management with ITS 4.1 APi integration
