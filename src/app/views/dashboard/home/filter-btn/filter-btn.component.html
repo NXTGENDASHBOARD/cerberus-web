@@ -52,18 +52,13 @@
               <div class="col-md-3">
                 <p>&#9660; Campus</p>
                 <ul>
-                  <div class="form-check">
+                  <div class="form-check" *ngFor="let campus of campuses">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                      Campus Name
+                      {{campus.name}}
                     </label>
                   </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Campus Name
-                      </label>
-                    </div>
+                    
                 </ul> 
               </div>
               <div class="col-md-3">
