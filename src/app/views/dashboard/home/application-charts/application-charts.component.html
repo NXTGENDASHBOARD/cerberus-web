@@ -26,66 +26,116 @@
     <br/>
   <app-application-pipeline></app-application-pipeline>
   <br/>
-  <div class="container-2 col-1-of-2" *ngIf="dashboardContainer2Charts.length > 0">
-    <mat-card *ngFor="let item of dashboardContainer2Charts">
-      <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
-       <app-chart
-      [chartType]="item.ChartType"
-      [isLegend]="item.isLegend"
-      [chartDatasets]="item.chartDatasets"
-      [chartLabels]="item.chartLabels"
-      [chartColors]="item.chartColors"
-      [chartOptions]="item.chartOptions"
-      (chartClickedEvent)="chartClicked($event)"
-    >
-    </app-chart>
-    </mat-card>
+
+  <div class="row">
+    <div class="col-md-6 ">
+      <div  *ngIf="dashboardContainer2Charts.length > 0">
+        <mat-card *ngFor="let item of dashboardContainer2Charts" style="height:450px !important">
+          <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+          <p class="txt-paragraph">Application by course type is very important as it will impact the government subsidies awarded to the institution. It is important to ensure that all course types meet their target capacity.</p>
+           <app-chart
+          [chartType]="item.ChartType"
+          [isLegend]="item.isLegend"
+          [chartDatasets]="item.chartDatasets"
+          [chartLabels]="item.chartLabels"
+          [chartColors]="item.chartColors"
+          [chartOptions]="item.chartOptions"
+          (chartClickedEvent)="chartClicked($event)"
+        >
+        </app-chart>
+        </mat-card>
+         
+
+      </div>
+    </div>
+    <div class="col-md-6 " >
+      <div  *ngIf="dashboardContainer20Charts.length > 0" >
+        <mat-card *ngFor="let item of dashboardContainer20Charts" style="height:450px !important">
+          <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+          <p class="txt-paragraph">This distribution curve shows the quality of student applying to your institution. To ensure the pass rate of the students remains the same, similarly abled students need to be admitted. This graph can also explain and deviations in the previous graph where students may not have the marks required to apply for specific course types.</p>
+           <app-chart
+          [chartType]="item.ChartType"
+          [isLegend]="item.isLegend"
+          [chartDatasets]="item.chartDatasets"
+          [chartLabels]="item.chartLabels"
+          [chartColors]="item.chartColors"
+          [chartOptions]="item.chartOptions"
+          (chartClickedEvent)="chartClicked($event)"
+        >
+        </app-chart>
+        </mat-card>
+          <br/>
+
+      </div>
+    </div>
+    
   </div>
-  <div class="container-3 col-1-of-3" *ngIf="dashboardContainer3Charts.length > 0">
-    <mat-card *ngFor="let item of dashboardContainer3Charts">
-         <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
-         <app-chart
+  <br/>
+  
+
+
+  
+
+</div>
+<p class="txt-app">APPLICANT DEMOGRAPHICS</p>
+<div class="row col-md-12">
+  
+  <div class="col-md-4">
+    <div *ngIf="dashboardContainer3Charts.length > 0">
+      <mat-card *ngFor="let item of dashboardContainer3Charts" style="height:480px !important">
+           <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+          <p class="txt-paragraph">Students demographics are important to maintain as they play an important part in government subsidies as well as adhering to the DHET requirements.</p>
+
+           <app-chart
+          [chartType]="item.ChartType"
+          [isLegend]="item.isLegend"
+          [chartDatasets]="item.chartDatasets"
+          [chartLabels]="item.chartLabels"
+          [chartColors]="item.chartColors"
+          [chartOptions]="item.chartOptions"
+          (chartClickedEvent)="chartClicked($event)"
+        >
+        </app-chart>
+       </mat-card>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div *ngIf="dashboardContainer30Charts.length > 0">
+      <mat-card *ngFor="let item of dashboardContainer30Charts" style="height:480px !important">
+        <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+        <p class="txt-paragraph">Students demographics are important to maintain as they play an important part in government subsidies as well as adhering to the DHET requirements.</p>
+
+        <app-chart
         [chartType]="item.ChartType"
         [isLegend]="item.isLegend"
         [chartDatasets]="item.chartDatasets"
         [chartLabels]="item.chartLabels"
         [chartColors]="item.chartColors"
         [chartOptions]="item.chartOptions"
-        (chartClickedEvent)="chartClicked($event)"
-      >
-      </app-chart>
-     </mat-card>
+          (chartClickedEvent)="chartClicked($event)"
+        >
+        </app-chart>
+      </mat-card>
+    </div>
   </div>
-
-</div>
-
-<div class="faculty-charts" *ngIf="dataTitle !== 'All'">     
-  <mat-card>
-    <mat-card-title>{{facultyDashboardCharts[0].chartDatasets[0].label}}</mat-card-title>
-    <app-chart
-      [chartType]="'bar'"
-      [isLegend]="true"
-      [chartDatasets]="facultyDashboardCharts[0].chartDatasets"
-      [chartLabels]="facultyDashboardCharts[0].chartLabels"
-      [chartColors]="facultyDashboardCharts[0].chartColors"
-      [chartOptions]="facultyDashboardCharts[0].chartOptions"
-      (chartClickedEvent)="chartClicked($event)"
-    >
-    </app-chart>
-  </mat-card>
-  <div class="container-3 col-1-of-3">
-    <mat-card *ngFor="let item of dashboardContainer3Charts">
-      <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
-      <app-chart
-     [chartType]="item.ChartType"
-     [isLegend]="item.isLegend"
-     [chartDatasets]="item.chartDatasets"
-     [chartLabels]="item.chartLabels"
-     [chartColors]="item.chartColors"
-     [chartOptions]="item.chartOptions"
-     (chartClickedEvent)="chartClicked($event)"
-   >
-   </app-chart>
-  </mat-card>
+  <div class="col-md-4" >
+    <div *ngIf="dashboardContainer40Charts.length > 0">
+      <mat-card *ngFor="let item of dashboardContainer40Charts" style="height:480px !important">
+        <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+        <p class="txt-paragraph">This graph shows the distribution of applicants by location. Applicants who are located in a different region to the institution may need to be catered for in terms of accommodation.</p>
+        <app-chart
+       [chartType]="item.ChartType"
+       [isLegend]="item.isLegend"
+       [chartDatasets]="item.chartDatasets"
+       [chartLabels]="item.chartLabels"
+       [chartColors]="item.chartColors"
+       [chartOptions]="item.chartOptions"
+       (chartClickedEvent)="chartClicked($event)"
+     >
+     </app-chart>
+    </mat-card>
+    <br/>
+    </div>
   </div>
 </div>
+

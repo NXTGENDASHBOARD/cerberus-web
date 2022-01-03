@@ -49,6 +49,7 @@
         <input type="password" aria-label="Pin" placeholder="Pin" formControlName="pin" class="form-control" aria-describedby="basic-addon2" [ngClass]="{ 'is-invalid': f.pin.errors && f.pin.touched }" id="pin" required>
       <div *ngIf="f.pin.errors &&(f.pin.touched || f.pin.dirty)" class="aler alert-danger">
         Pin is required
+       
       </div>
 
       

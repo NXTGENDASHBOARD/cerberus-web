@@ -24,7 +24,10 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
   // Dynamic charts
   dashboardCharts: ChartModel[] = [];
   dashboardContainer2Charts: ChartModel[] = [];
+  dashboardContainer20Charts: ChartModel[] = [];
   dashboardContainer3Charts: ChartModel[] = [];
+  dashboardContainer30Charts: ChartModel[] = [];
+  dashboardContainer40Charts: ChartModel[] = [];
 
   // Faculty dynamic charts
   facultyDashboardCharts: ChartModel[] = [];
@@ -310,7 +313,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     };
 
     this.dashboardContainer2Charts.push(barGraph);
-    this.dashboardContainer2Charts.push(barLineGraph);
+    this.dashboardContainer20Charts.push(barLineGraph);
   }
   generateApplicationsContainer3ChartDate() {
     // Pie graph
@@ -322,15 +325,15 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
           label: 'Applicant race',
         },
       ],
-      chartLabels: ['White', 'Indian', 'Colored', 'Black', 'Other'],
+      chartLabels: ['Black', 'Indian', 'Colored', 'White', 'Other'],
       chartColors: [
         {
           backgroundColor: [
             '#F6BD60',
             '#84A59D',
+            '#F28482',
+            '#F7EDE2',
             '#FFFFFF',
-            '#CBCBCB',
-            '#000000',
           ],
           borderColor: ['', '', '#F6BD60', '', '#84A59D'],
           borderWidth: 2,
@@ -410,8 +413,8 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     };
 
     this.dashboardContainer3Charts.push(pieGraph);
-    this.dashboardContainer3Charts.push(genderPieGraph);
-    this.dashboardContainer3Charts.push(doughnutGraph);
+    this.dashboardContainer30Charts.push(genderPieGraph);
+    this.dashboardContainer40Charts.push(doughnutGraph);
   }
 
   generateFacultyApplicationsChartData(data: DashboardDataModel | undefined) {
