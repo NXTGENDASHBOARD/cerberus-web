@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ShortListRoutingModule } from './short-list-routing.module';
-import { ShortListComponent } from './short-list.component';
+import { declarations, ShortListRoutingModule } from './short-list-routing.module';
 
+ 
 
 @NgModule({
   declarations: [
-    ShortListComponent
+   ...declarations
   ],
   imports: [
     CommonModule,
