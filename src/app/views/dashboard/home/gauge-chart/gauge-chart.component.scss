@@ -6,7 +6,7 @@
   .centered {
     position: absolute;
     top: 40%;
-    left: 35%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
   /* Bottom left text */
@@ -19,13 +19,13 @@
 .bottom-right {
     position: absolute;
     bottom: 155px;
-    right: 220px;
+    right: 40px;
   }
 
   .mat-card {
    // margin-right: 1rem;
     border-radius: 20px;
-    
+    height: 400px !important;
     // width: 40%;
     text-align:center;
     // margin: 0 auto;
@@ -45,7 +45,7 @@
 .bottom-right {
     position: absolute;
     bottom: 155px;
-    right: 170px;
+    right: 40px;
   }
 }
 

@@ -19,7 +19,7 @@ getApps(){
   this.applicationServive.getApplications().subscribe(x =>{
     console.log(x);
      this.applications = x;
-     this.applications = this.applications.length
+     this.applications = this.applications.length;
   });
 }
   draw() {
