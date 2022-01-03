@@ -7,6 +7,9 @@ import {
 } from '@angular/core';
 import { NgxGaugeType } from 'ngx-gauge/gauge/gauge';
 import { ChartModel, DashboardDataModel } from 'src/app/_models';
+import { ApplicationService } from 'src/app/_services/application/application.service';
+import * as d3 from "d3";
+
 
 @Component({
   selector: 'app-application-charts',
@@ -14,16 +17,21 @@ import { ChartModel, DashboardDataModel } from 'src/app/_models';
   styleUrls: ['./application-charts.component.scss'],
 })
 export class ApplicationChartsComponent implements OnInit, OnChanges {
+  
+
   @Input() dataTitle: string;
   @Input() dashboardDataModel: DashboardDataModel | undefined;
   // Dynamic charts
   dashboardCharts: ChartModel[] = [];
   dashboardContainer2Charts: ChartModel[] = [];
+  dashboardContainer20Charts: ChartModel[] = [];
   dashboardContainer3Charts: ChartModel[] = [];
+  dashboardContainer30Charts: ChartModel[] = [];
+  dashboardContainer40Charts: ChartModel[] = [];
 
   // Faculty dynamic charts
   facultyDashboardCharts: ChartModel[] = [];
-  constructor() {}
+  constructor(private applicationServive:ApplicationService) {}
   ngOnChanges(changes: SimpleChanges): void {
     this.generateFacultyApplicationsChartData(this.dashboardDataModel);
   }
@@ -32,6 +40,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     this.generateApplicationsChartData();
     this.generateApplicationsContainer2ChartDate();
     this.generateApplicationsContainer3ChartDate();
+   
   }
 
   public chartClicked(e: any): void {
@@ -45,13 +54,13 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartDatasets: [
         {
           data: [65, 30, 17, 25, 30, 35, 40],
-          label: 'Invalid applications',
+          label: 'Documentation Missing',
         },
         {
           data: [10, 58, 50, 60, 40, 15, 30],
-          label: 'Partially valid applications',
+          label: 'Applications Process Incomplete',
         },
-        { data: [15, 2, 23, 5, 10, 5, 10], label: 'Valid applications' },
+        { data: [15, 2, 23, 5, 10, 5, 10], label: 'Valid Complete Applications' },
       ],
       chartLabels: [
         'Sciences',
@@ -65,64 +74,64 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
           ],
           borderColor: [
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
           ],
           borderWidth: 2,
         },
         {
           backgroundColor: [
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
           ],
           borderColor: [
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
           ],
           borderWidth: 2,
         },
         {
           backgroundColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderWidth: 2,
         },
@@ -206,20 +215,20 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
         },
       ],
@@ -248,10 +257,10 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
           type: 'line',
           order: 1,
           backgroundColor: 'transparent',
-          borderColor: '#CBA041',
+          borderColor: '#F6BD60',
           borderWidth: 2,
-          pointBorderColor: '#CBA041',
-          pointBackgroundColor: '#CBA041',
+          pointBorderColor: '#F6BD60',
+          pointBackgroundColor: '#F6BD60',
           // lineTension: 0.0,
         },
       ],
@@ -259,37 +268,37 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
         },
         {
           // backgroundColor: 'rgba(0, 137, 132, .2)',
-          borderColor: '#CBA041',
+          borderColor: '#F6BD60',
           borderWidth: 2,
         },
       ],
@@ -304,7 +313,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     };
 
     this.dashboardContainer2Charts.push(barGraph);
-    this.dashboardContainer2Charts.push(barLineGraph);
+    this.dashboardContainer20Charts.push(barLineGraph);
   }
   generateApplicationsContainer3ChartDate() {
     // Pie graph
@@ -316,17 +325,17 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
           label: 'Applicant race',
         },
       ],
-      chartLabels: ['White', 'Indian', 'Colored', 'Black', 'Other'],
+      chartLabels: ['Black', 'Indian', 'Colored', 'White', 'Other'],
       chartColors: [
         {
           backgroundColor: [
-            '#CBA041',
-            '#5F9547',
+            '#F6BD60',
+            '#84A59D',
+            '#F28482',
+            '#F7EDE2',
             '#FFFFFF',
-            '#CBCBCB',
-            '#000000',
           ],
-          borderColor: ['', '', '#CBA041', '', '#5F9547'],
+          borderColor: ['', '', '#F6BD60', '', '#84A59D'],
           borderWidth: 2,
         },
       ],
@@ -345,7 +354,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartLabels: ['Male', 'Female', 'Other'],
       chartColors: [
         {
-          backgroundColor: ['#CBA041', '#CBCBCB', '#5F9547'],
+          backgroundColor: ['#F6BD60', '#CBCBCB', '#84A59D'],
           borderWidth: 2,
         },
       ],
@@ -404,8 +413,8 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     };
 
     this.dashboardContainer3Charts.push(pieGraph);
-    this.dashboardContainer3Charts.push(genderPieGraph);
-    this.dashboardContainer3Charts.push(doughnutGraph);
+    this.dashboardContainer30Charts.push(genderPieGraph);
+    this.dashboardContainer40Charts.push(doughnutGraph);
   }
 
   generateFacultyApplicationsChartData(data: DashboardDataModel | undefined) {
@@ -450,64 +459,64 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
         chartColors: [
           {
             backgroundColor: [
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
             ],
             borderColor: [
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
             ],
             borderWidth: 2,
           },
           {
             backgroundColor: [
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
             ],
             borderColor: [
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
             ],
             borderWidth: 2,
           },
           {
             backgroundColor: [
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
             ],
             borderColor: [
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
             ],
             borderWidth: 2,
           },
@@ -536,4 +545,5 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       this.facultyDashboardCharts.push(barGraph);
     }
   }
+  
 }
