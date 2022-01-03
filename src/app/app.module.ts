@@ -5,15 +5,16 @@ import { SHARED_MODULES } from './shared/shared.import';
 import { ErrorInterceptor, JwtInterceptor } from './_helpers';
 import { ThemeService } from './_services';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './store/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { metaReducers, reducers } from './store/reducers';
+
 
 @NgModule({
   declarations: [APP_COMPONENTS],
   imports: [
     APP_MODULES,
-    SHARED_MODULES,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
@@ -22,6 +23,8 @@ import { environment } from '../environments/environment';
       },
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    SHARED_MODULES,
+    NgApexchartsModule
   ],
   providers: [
     ThemeService,

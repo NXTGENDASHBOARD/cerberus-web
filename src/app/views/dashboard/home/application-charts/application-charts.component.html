@@ -1,19 +1,30 @@
+
 <div class="charts" *ngIf="dataTitle === 'All'">
-  <div class="container-1 col-1-of-2" *ngIf="dashboardCharts.length > 0">   
-    <mat-card *ngFor="let item of dashboardCharts">
-      <mat-card-title>APPLICATIONS BY FACULTY</mat-card-title>
-      <app-chart
-        [chartType]="item.ChartType"
-        [isLegend]="item.isLegend"
-        [chartDatasets]="item.chartDatasets"
-        [chartLabels]="item.chartLabels"
-        [chartColors]="item.chartColors"
-        [chartOptions]="item.chartOptions"
-        (chartClickedEvent)="chartClicked($event)"
-      >
-      </app-chart>
-    </mat-card>
+  <app-filter-btn></app-filter-btn>
+  <br/>
+  <div class="row col-md-12">
+    <div class="col-md-6 ">
+      <app-gauge-chart></app-gauge-chart>
+    </div>
+    <div class="col-md-6" *ngIf="dashboardCharts.length > 0">   
+      <mat-card *ngFor="let item of dashboardCharts">
+        <mat-card-title>APPLICATIONS BY FACULTY</mat-card-title>
+        <app-chart
+          [chartType]="item.ChartType"
+          [isLegend]="item.isLegend"
+          [chartDatasets]="item.chartDatasets"
+          [chartLabels]="item.chartLabels"
+          [chartColors]="item.chartColors"
+          [chartOptions]="item.chartOptions"
+          (chartClickedEvent)="chartClicked($event)"
+        >
+        </app-chart>
+      </mat-card>
+    </div>
   </div>
+    <br/>
+  <app-application-pipeline></app-application-pipeline>
+  <br/>
   <div class="container-2 col-1-of-2" *ngIf="dashboardContainer2Charts.length > 0">
     <mat-card *ngFor="let item of dashboardContainer2Charts">
       <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>

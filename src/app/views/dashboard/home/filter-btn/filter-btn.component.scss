@@ -1,0 +1,41 @@
+.btn-primary{
+    background-color: grey;
+    border: grey 2px solid;
+    float: right;
+    color: white;
+}
+.fa-filter{
+    color: white;
+}
+.nav{
+    width: 30%;
+    border: 1px grey solid;
+    border-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: grey;
+    border-radius: 50px;
+    // border-top-left-radius: 50px;
+    // border-left: 1px 5px grey solid;
+}
+.nav-link{
+    color: #84A59D;
+    border-top-left-radius: 50px;
+    border: 1px grey solid;
+    border-bottom-left-radius: 50px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+   
+
+}
+.nav-pills .nav-link:active{
+    color: #84A59D;
+    border-top-left-radius: 50px;
+    border: 1px grey solid;
+    border-bottom-left-radius: 50px;
+    border-right: none;
+}
