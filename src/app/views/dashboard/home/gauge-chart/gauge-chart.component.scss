@@ -6,7 +6,7 @@
   .centered {
     position: absolute;
     top: 54%;
-    left: 50%;
+    left: 44%;
     transform: translate(-50%, -50%);
   }
   /* Bottom left text */
@@ -39,7 +39,11 @@ mat-card-title{
   font-size: 15px;
 }
 .txt-paragraph{
-  font-size: 12px;
+  text-align: left;
+font: normal normal normal 12px/15px Montserrat;
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
 }
 .arrows-element {
   text-align: center;
@@ -80,14 +84,10 @@ mat-card-title{
 //     right: 138px;
 //   }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .carousel .slide {
-        height: 450px;
-    }
+    
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-    .carousel .slide {
-        height: 200px;
-    }
+    
 }
