@@ -128,7 +128,7 @@ getApps(){
 
         var arcs = svg.append('g')
           .attr('class', 'arc')
-          .attr('transform', "matrix("+1+","+ 0+","+ 0+","+ 1+","+ 174.255737+","+ 139.187576+")");
+          .attr('transform', "matrix("+1+","+ 0+","+ 0+","+ 1+","+ 143.607697+","+ 184.08931+")");
 
         arcs.selectAll('path')
           .data(tickData)
@@ -159,7 +159,7 @@ getApps(){
         var pointerLine = d3.line().curve(d3.curveLinear)
         var pg = svg.append('g').data([lineData])
           .attr('class', 'pointer')
-          .attr('transform', "matrix("+0.910261+","+ 0+","+ 0+","+ 0.605608+","+ 182.421082+","+ 73.232422+")");
+          .attr('transform', "matrix("+0.910261+","+ 0+","+ 0+","+ 0.605608+","+ 133.34021+","+ 112.004562+")");
 
         pointer = pg.append('path')
           .attr('d', "M 22.728 -67.629 L 17.617 -98.194 L 12.507 -67.629 L 17.617 -66.497 L 22.728 -67.629"/*function(d) { return pointerLine(d) +'Z';}*/)

@@ -17,8 +17,7 @@ import * as d3 from "d3";
   styleUrls: ['./application-charts.component.scss'],
 })
 export class ApplicationChartsComponent implements OnInit, OnChanges {
-  gaugemap = {};
-  public applications:any = [];
+  
 
   @Input() dataTitle: string;
   @Input() dashboardDataModel: DashboardDataModel | undefined;
@@ -38,8 +37,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     this.generateApplicationsChartData();
     this.generateApplicationsContainer2ChartDate();
     this.generateApplicationsContainer3ChartDate();
-    this.draw();
-    this.getApps();
+   
   }
 
   public chartClicked(e: any): void {
@@ -53,13 +51,13 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartDatasets: [
         {
           data: [65, 30, 17, 25, 30, 35, 40],
-          label: 'Invalid applications',
+          label: 'Documentation Missing',
         },
         {
           data: [10, 58, 50, 60, 40, 15, 30],
-          label: 'Partially valid applications',
+          label: 'Applications Process Incomplete',
         },
-        { data: [15, 2, 23, 5, 10, 5, 10], label: 'Valid applications' },
+        { data: [15, 2, 23, 5, 10, 5, 10], label: 'Valid Complete Applications' },
       ],
       chartLabels: [
         'Sciences',
@@ -73,64 +71,64 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
           ],
           borderColor: [
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
-            '#CBA041',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
+            '#F6BD60',
           ],
           borderWidth: 2,
         },
         {
           backgroundColor: [
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
           ],
           borderColor: [
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
-            '#707070',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
+            '#F7EDE2',
           ],
           borderWidth: 2,
         },
         {
           backgroundColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderWidth: 2,
         },
@@ -214,20 +212,20 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
         },
       ],
@@ -256,10 +254,10 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
           type: 'line',
           order: 1,
           backgroundColor: 'transparent',
-          borderColor: '#CBA041',
+          borderColor: '#F6BD60',
           borderWidth: 2,
-          pointBorderColor: '#CBA041',
-          pointBackgroundColor: '#CBA041',
+          pointBorderColor: '#F6BD60',
+          pointBackgroundColor: '#F6BD60',
           // lineTension: 0.0,
         },
       ],
@@ -267,37 +265,37 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
           borderColor: [
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
-            '#5F9547',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
+            '#84A59D',
           ],
         },
         {
           // backgroundColor: 'rgba(0, 137, 132, .2)',
-          borderColor: '#CBA041',
+          borderColor: '#F6BD60',
           borderWidth: 2,
         },
       ],
@@ -328,13 +326,13 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartColors: [
         {
           backgroundColor: [
-            '#CBA041',
-            '#5F9547',
+            '#F6BD60',
+            '#84A59D',
             '#FFFFFF',
             '#CBCBCB',
             '#000000',
           ],
-          borderColor: ['', '', '#CBA041', '', '#5F9547'],
+          borderColor: ['', '', '#F6BD60', '', '#84A59D'],
           borderWidth: 2,
         },
       ],
@@ -353,7 +351,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       chartLabels: ['Male', 'Female', 'Other'],
       chartColors: [
         {
-          backgroundColor: ['#CBA041', '#CBCBCB', '#5F9547'],
+          backgroundColor: ['#F6BD60', '#CBCBCB', '#84A59D'],
           borderWidth: 2,
         },
       ],
@@ -458,64 +456,64 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
         chartColors: [
           {
             backgroundColor: [
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
             ],
             borderColor: [
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
-              '#CBA041',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
+              '#F6BD60',
             ],
             borderWidth: 2,
           },
           {
             backgroundColor: [
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
             ],
             borderColor: [
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
-              '#707070',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
+              '#F7EDE2',
             ],
             borderWidth: 2,
           },
           {
             backgroundColor: [
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
             ],
             borderColor: [
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
-              '#5F9547',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
+              '#84A59D',
             ],
             borderWidth: 2,
           },
@@ -544,187 +542,5 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       this.facultyDashboardCharts.push(barGraph);
     }
   }
-  getApps(){
-    this.applicationServive.getApplications().subscribe(x =>{
-      console.log(x);
-       this.applications = x;
-       this.applications = this.applications.length;
-    });
-  }
-    draw() {
-       var self:any = this;
-      var gauge = function (container:any, configuration:any) {
-      
-        var config:any = {
-          size: 710,
-          clipWidth: 200,
-          clipHeight: 110,
-          ringInset: 20,
-          ringWidth: 20,
   
-          pointerWidth: 10,
-          pointerTailLength: 5,
-          pointerHeadLengthPercent: 0.9,
-  
-          minValue: 0,
-          maxValue: 10,
-  
-          minAngle: -90,
-          maxAngle: 90,
-  
-          transitionMs: 750,
-  
-          majorTicks: 4,
-          labelFormat: d3.format('d'),
-          labelInset: 10,
-  
-          arcColorFn: d3.interpolateHsl(d3.rgb('#D9E3E1'), d3.rgb(' #84A59D'))
-        };
-        var range:any = undefined;
-        var r:any = undefined;
-        var pointerHeadLength:any = undefined;
-        var value = 0;
-  
-        var svg:any = undefined;
-        var arc:any = undefined;
-        var scale:any = undefined;
-        var ticks:any = undefined;
-        var tickData:any = undefined;
-        var pointer:any = undefined;
-  
-        var donut = d3.pie();
-  
-        function deg2rad(deg:any) {
-          return deg * Math.PI / 180;
-        }
-  
-        function newAngle(d:any) {
-          var ratio = scale(d);
-          var newAngle = config.minAngle + (ratio * range);
-          return newAngle;
-        }
-  
-        function configure(configuration:any) {
-         let prop:any = undefined;
-          for ( prop in configuration) {
-            config[prop] = configuration[prop];
-          }
-  
-          range = config.maxAngle - config.minAngle;
-          r = config.size / 2;
-          pointerHeadLength = Math.round(r * config.pointerHeadLengthPercent);
-  
-          // a linear scale this.gaugemap maps domain values to a percent from 0..1
-          scale = d3.scaleLinear()
-            .range([0, 1])
-            .domain([config.minValue, config.maxValue]);
-  
-          ticks = scale.ticks(config.majorTicks);
-          tickData = d3.range(config.majorTicks).map(function () { return 1 / config.majorTicks; });
-  
-          arc = d3.arc()
-            .innerRadius(r - 20 - config.ringInset)
-            .outerRadius(r - config.ringInset)
-            .startAngle(function (d:any, i:any) {
-              var ratio = d * i;
-              return deg2rad(config.minAngle + (ratio * range));
-            })
-            .endAngle(function (d:any, i:any) {
-              var ratio = d * (i + 1);
-              return deg2rad(config.minAngle + (ratio * range));
-            });
-        }
-        self.gaugemap.configure = configure;
-  
-        function centerTranslation() {
-          return 'translate(' + r + ',' + r + ')';
-        }
-  
-        function isRendered() {
-          return (svg !== undefined);
-        }
-        self.gaugemap.isRendered = isRendered;
-  
-        function render(newValue:any) {
-          svg = d3.select(container)
-            .append('svg:svg')
-            .attr('class', 'gauge')
-            .attr('width', 500)
-            .attr('height', config.clipHeight)
-            .attr('xmlns','http://www.w3.org/2000/svg');
-  
-          var centerTx = centerTranslation();
-  
-          var arcs = svg.append('g')
-            .attr('class', 'arc')
-            .attr('transform', "matrix("+1+","+ 0+","+ 0+","+ 1+","+ 174.255737+","+ 139.187576+")");
-  
-          arcs.selectAll('path')
-            .data(tickData)
-            .enter().append('path')
-            .attr('fill', function (d:any, i:any) {
-              return config.arcColorFn(d * i);
-            })
-            .attr('d', arc);
-  
-          // var lg = svg.append('g')
-          //   .attr('class', 'label')
-          //   .attr('transform', "matrix("+1+","+ 0+","+ 0+","+ 1+","+ 208.406281+","+ 160.778976+")");
-          // lg.selectAll('text')
-          //   .data(ticks)
-          //   .enter().append('text')
-          //   .attr('transform', function (d:any) {
-          //     var ratio = scale(d);
-          //     var newAngle = config.minAngle + (ratio * range);
-          //     return 'rotate(' + newAngle + ') translate(0,' + (config.labelInset - r) + ')';
-          //   })
-          //   .text(config.labelFormat);
-  
-          var lineData = [[config.pointerWidth / 2, 0],
-          [0, -pointerHeadLength],
-          [-(config.pointerWidth / 2), 0],
-          [0, config.pointerTailLength],
-          [config.pointerWidth / 2, 0]];
-          var pointerLine = d3.line().curve(d3.curveLinear)
-          var pg = svg.append('g').data([lineData])
-            .attr('class', 'pointer')
-            .attr('transform', "matrix("+0.910261+","+ 0+","+ 0+","+ 0.605608+","+ 182.421082+","+ 73.232422+")");
-  
-          pointer = pg.append('path')
-            .attr('d', "M 22.728 -67.629 L 17.617 -98.194 L 12.507 -67.629 L 17.617 -66.497 L 22.728 -67.629"/*function(d) { return pointerLine(d) +'Z';}*/)
-            .attr('transform', "matrix(0.951057, 0.309017, -0.309017, 0.951057, -24.583891, -9.474379)")
-            .attr('style','fill:#84A59D');
-  
-          update(newValue === undefined ? 0 : newValue);
-        }
-        self.gaugemap.render = render;
-        function update(newValue:any, newConfiguration?:any) {
-          if (newConfiguration !== undefined) {
-            configure(newConfiguration);
-          }
-          var ratio = scale(newValue);
-          var newAngle = config.minAngle + (ratio * range);
-          pointer.transition()
-            .duration(config.transitionMs)
-            .ease(d3.easeElastic)
-            .attr('transform', 'rotate(' + newAngle + ')');
-        }
-        self.gaugemap.update = update;
-  
-        configure(configuration);
-  
-        return self.gaugemap;
-      };
-  
-      var powerGauge = gauge('#power-gauge', {
-        size: 300,
-        clipWidth: 300,
-        clipHeight: 300,
-        ringWidth: 60,
-        maxValue: 10,
-        transitionMs: 4000,
-      });
-      powerGauge.render(6);
-  
-    }
 }

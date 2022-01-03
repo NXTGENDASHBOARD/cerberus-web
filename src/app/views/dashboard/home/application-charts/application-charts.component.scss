@@ -5,23 +5,26 @@
   &:last-child {
     margin-right: 0;
   }
-   .mat-card-title {
-    color: $grey;
-    font-weight: 400;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 1rem 0;
-  }
+   
   text-align:center;
   width: 100%;
 }
-
+mat-card-title{
+  color: #5F9547;
+  font: normal normal normal 20px/24px Montserrat;
+  opacity: 1;
+  letter-spacing: 0px;
+  text-align: left;
+  font-size: 15px;
+}
 .charts {
   margin: 2rem 0;
   padding-bottom: 1rem;
   
 
+}
+.txt-paragraph{
+  font-size: 12px;
 }
 
 .container-1 {
