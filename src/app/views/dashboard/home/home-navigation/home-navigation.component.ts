@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { tabs } from 'src/app/shared';
  
 @Component({
   selector: 'app-home-navigation',
@@ -7,18 +8,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./home-navigation.component.scss'],
 })
 export class HomeNavigationComponent implements OnInit {
-  tabs = [
-    'Analytics',
-    'Sciences',
-    'Commerce',
-    'Law',
-    'Management',
-    'Engineering',
-    'Health Sciences',
-    'Humanities',
-    'Environmental Studies',
-    
-  ];
+  tabs = tabs;
   selected = new FormControl(0);
   @Output() selectedFaculty = new EventEmitter<any>();
   constructor() {}

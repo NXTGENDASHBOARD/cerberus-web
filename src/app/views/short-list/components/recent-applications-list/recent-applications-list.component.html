@@ -1,5 +1,82 @@
 <div class="container-fluid">
-    <p *ngIf="shortLists$ | async as applications">
-        {{applications | json}}
-    </p>
+  <div class="tab-container">
+    <h1 class="header">Faculties</h1>
+    <mat-tab-group
+      [selectedIndex]="selected.value"
+      (selectedIndexChange)="selected.setValue($event); tabClicked()"
+    >
+      <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+      </mat-tab>
+    </mat-tab-group>
+    <h1 class="duration">1 Month 12 Days 17 Hours Until Applications Close</h1>
+  </div>
+
+  <div class="header-container">
+    <h1 class="big-header">Shortlist</h1>
+    <div class="filter-container">
+      <div class="filter">
+        <h1 class="filter-label">Filter by qualification:</h1>
+        <div class="filter-select">
+          <div class="form-group">
+            <div class="form-input">
+              <mat-form-field appearance="outline">
+                <mat-select>
+                  <mat-option
+                    *ngFor="let qualification of qualifications"
+                    [value]="qualification"
+                  >
+                    {{ qualification }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="data-tab-container">
+    <mat-tab-group>
+      <mat-tab *ngFor="let tab of dataTabs">
+        <ng-template mat-tab-label>{{ tab.label }}</ng-template>
+        <div class="data-table-card" *ngFor="let item of tab.shortlists">
+          <div class="data-table-card-container">
+            <h4 class="header">{{ item.firstname }} {{ item.lastname }}</h4>
+            <h4 class="data">
+              {{ item.email }}
+            </h4>
+            <h4 class="data">011 010 0000</h4>
+            <div class=""></div>
+          </div>
+          <div class="data-table-card-container">
+            <br />
+            <div class="col-1-of-2">
+              <h4 class="label">Gender</h4>
+              <h4 class="data">
+                {{ item.gender }}
+              </h4>
+            </div>
+            <div class="col-1-of-2">
+              <h4 class="label">Ethnic Group</h4>
+              <h4 class="data">
+                {{ item.ethnicity }}
+              </h4>
+            </div>
+            <div class="col-1-of-2">
+              <h4 class="label">City/Province</h4>
+              <h4 class="data">Gauteng</h4>
+            </div>
+          </div>
+          <div class="data-table-card-container">
+            <br />
+            <div class="col-1-of-2">
+              <h4 class="label">Date Submitted:</h4>
+              <h4 class="data">{{ item.createdDate | date }}</h4>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 </div>

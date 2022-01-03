@@ -1,0 +1,97 @@
+@import "../../../../../assets/styles/index";
+
+.tab-container {
+  padding: 2rem 0;
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    &.header {
+      text-transform: uppercase;
+      font-weight: 400;
+      color: $grey;
+      margin: 0;
+    }
+  }
+
+  .duration {
+    color: #f28482;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  mat-tab-group {
+    // padding: 15px;
+    height: 50px;
+  }
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 60% auto;
+  h1 {
+    font-size: 1rem;
+    color: $primary;
+    &.big-header {
+      font-size: 60px;
+      font-weight: 600;
+    }
+  }
+}
+
+.filter-container {
+  padding: 1rem;
+  .filter {
+    display: flex;
+    margin-right: 1rem;
+    float: right;
+    .filter-label {
+      background-color: #7a7979;
+      color: $cloud;
+      font-weight: 400;
+      font-size: 0.75rem;
+      padding: 1rem;
+    }
+
+    .filter-select {
+      select {
+        display: none; /*hide original SELECT element:*/
+      }
+    }
+  }
+}
+
+.data-table-card {
+    display: block;
+    position: relative;
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    background: $white;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+
+    .data-table-card-container {
+        display: grid;
+        grid-template-columns: 100%;
+        .col-1-of-2 {
+            margin: 0;
+        }
+        .header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $primary;
+        }
+
+        .data {
+            font-size: 1rem;
+            color: #7A7979;
+        }
+
+        .label {
+            font-size: 1rem;
+            color: #5F9547;
+        }
+
+    }
+ }
