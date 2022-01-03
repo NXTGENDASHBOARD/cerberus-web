@@ -1,19 +1,19 @@
 export interface ApplicationModel {
-    Id?: number;
-    Firstname: string;
-    Lastname: string;
-    Email: string;
-    Gender: string;
-    Ethnicity: string;
-    ApplicationDate: string;
-    IsDisable: boolean;
-    ApplicationStage?: string;
-    AddressId?: string;
-    InstitutionId?: string;
-    CreatedDate?: string;
-    CreateUserId?: string;
-    ModifyDate?: string;
-    ModifyUserId?: string; 
-    IsActive: boolean;
-    StatusId: number;
+    id?: any;
+    firstname: string;
+    lastname: string;
+    email: string;
+    gender: string;
+    ethnicity: string;
+    applicationDate: string;
+    isDisable: boolean;
+    applicationStage?: string;
+    addressId?: string;
+    institutionId?: string;
+    createdDate?: string;
+    createUserId?: string;
+    modifyDate?: string;
+    modifyUserId?: string; 
+    isActive: boolean;
+    statusId: number;
 }

@@ -20,4 +20,8 @@ export class ApplicationService {
   getApplications() {
     return this.http.get(baseUrl);
   }
+
+  updateShortlistApplication(model: ApplicationModel): Observable<number> {
+    return this.http.put<number>(`${baseUrl}/${model.id}`, model);
+  }
 }

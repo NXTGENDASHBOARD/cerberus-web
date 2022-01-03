@@ -9,12 +9,14 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { metaReducers, reducers } from './store/reducers';
+import { EffectsModule } from '@ngrx/effects';
 
 
 @NgModule({
   declarations: [APP_COMPONENTS],
   imports: [
     APP_MODULES,
+    EffectsModule.forRoot([]),
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

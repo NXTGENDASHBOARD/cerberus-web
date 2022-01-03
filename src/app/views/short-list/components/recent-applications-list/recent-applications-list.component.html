@@ -1,1 +1,5 @@
-<p>recent-applications-list works!</p>
+<div class="container-fluid">
+    <p *ngIf="shortLists$ | async as applications">
+        {{applications | json}}
+    </p>
+</div>
