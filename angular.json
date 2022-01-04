@@ -133,7 +133,6 @@
   },
   "defaultProject": "cerebus-app",
   "cli": {
-    "analytics": false,
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@ngrx/schematics"
   }
 }

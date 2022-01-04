@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://nxtgen.dedicated.co.za"
+  apiUrl: "http://nxtgen.dedicated.co.za/api",
+
+  // apiUrl: "https://localhost:5001/api"
 };
 
 /*

@@ -13,7 +13,6 @@ export class LoginSuccessComponent implements OnInit {
 
   ngOnInit(): void {
     this.account = this.accountService.accountValue;
-    console.log(JSON.stringify(this.account));
   }
 
   logout() {

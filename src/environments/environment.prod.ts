@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://nxtgen.dedicated.co.za',
+  apiUrl: 'http://nxtgen.dedicated.co.za/api',
 };
