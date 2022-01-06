@@ -1,16 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ApplicationModel } from 'src/app/_models';
 import { environment } from 'src/environments/environment';
 
-const baseUrl = environment.apiUrl + '/api/applications'
+const baseUrl = environment.apiUrl + '/applications';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApplicationService {
-  
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getApplications(){
+  // Get All applications
+  getAll(): Observable<ApplicationModel[]> {
+    return this.http.get<ApplicationModel[]>(`${baseUrl}`);
+  }
+
+  getApplications() {
     return this.http.get(baseUrl);
+  }
+
+  updateShortlistApplication(model: ApplicationModel): Observable<number> {
+    return this.http.put<number>(`${baseUrl}/${model.id}`, model);
   }
 }
