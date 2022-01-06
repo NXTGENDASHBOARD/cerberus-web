@@ -1,10 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { Account } from 'src/app/_models';
 import { AccountService } from 'src/app/_services';
+
+
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -12,6 +25,11 @@ import { AccountService } from 'src/app/_services';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  staffNumber = new FormControl('', [Validators.required]);
+  pin  = new FormControl('', [Validators.required]);
+  matcher = new MyErrorStateMatcher();
+
+
   myForm: FormGroup;
   loading: boolean;
   error: string;
@@ -25,9 +43,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = this.formBuilder.group({
-      staffNumber: ['', [Validators.required]],
-      pin: ['', Validators.required],
+      staffNumber: this.staffNumber,
+      pin: this.pin,
     });
+    
   }
 
   // convenience getter for easy access to form fields

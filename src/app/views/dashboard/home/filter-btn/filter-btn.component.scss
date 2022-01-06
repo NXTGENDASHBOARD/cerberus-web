@@ -4,8 +4,17 @@
     float: right;
     color: white;
 }
+.dropstart{
+    float: right;
+}
+.dropdown-menu {
+    width: 1000px !important;  /* change the number to whatever that you need */
+}
 .fa-filter{
     color: white;
+}
+.bott{
+    z-index: 999999;
 }
 .nav{
     width: 30%;
@@ -39,3 +48,17 @@
     border-bottom-left-radius: 50px;
     border-right: none;
 }
+.example-container {
+    width: 100%;
+   // height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    
+  }
+  .example-sidenav{
+      width: 96.6%;
+      background-color: grey !important;
+     // height: 50px;
+  }
+  .dropdown{
+      z-index: 99999;
+  }

@@ -8,10 +8,12 @@ import { CampusService } from 'src/app/_services/campus/campus.service';
 })
 export class FilterBtnComponent implements OnInit {
 public campuses:any = [];
+showFiller = false;
   constructor(private campusService:CampusService) { }
 
   ngOnInit(): void {
     this.getCampuses();
+  
   }
   getCampuses(){
     this.campusService.getCampuses().subscribe(data => {

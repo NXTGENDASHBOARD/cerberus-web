@@ -1,3 +1,20 @@
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: black !important;
+ }
+ 
+
+mat-form-field {
+  width: 70%;
+}
+
+input{
+  color: black;
+}
 
 #bg-image {  
   background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../../../../assets/images/login-bg.jpg");  
@@ -8,11 +25,12 @@
  text-align: center;
  
 }
+
 .center{
   position: absolute;
   width: 405px;
   height: 50px;
-  top: 50%;
+  top: 35%;
   left: 50%;
   margin-left: -200px; /* margin is -0.5 * dimension */
   margin-top: -25px; 
@@ -39,7 +57,7 @@ h1{
 }
 .input-group{
   width:70%;
-  margin-left:50px;
+  margin-left:60px;
 }
 .prof{
   font-size: 12px;
@@ -48,7 +66,7 @@ h1{
 .navbar-text {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
-  margin-left: 75%;
+  margin-left: 70%;
 }
 .input-group-text {
  
@@ -58,6 +76,16 @@ h1{
 }
 input{
   border-left: 0px solid;
+}
+.aler{
+//  width: 50%;
+//  margin: 0 auto;
+  background-color: transparent !important;
+  color: rgb(245, 98, 98) !important;
+}
+.alert-danger{
+  background-color: transparent !important;
+  color: rgb(245, 98, 98) !important;
 }
 
 @media (max-width: 400px){

@@ -6,7 +6,7 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand">Logo</a>
+      <a class="navbar-brand"><img src="../../../../assets/images/University of AdaptIT logo-01.jpg" width="100"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,32 +30,71 @@
   <form class="form-signin" [formGroup]="myForm">
     <p><i>Your application management system</i></p>
     <br/><br/>
-    <div class="input-group mb-3">
+    <!-- <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
       </div>
      
       <input type="text" class="form-control" formControlName="staffNumber" placeholder="Staff Number" aria-label="Staff Number" aria-describedby="basic-addon1" [ngClass]="{ 'is-invalid': f.staffNumber.errors && f.staffNumber.touched }">
       
-    <div *ngIf="f.staffNumber.errors &&(f.staffNumber.touched || f.staffNumber.dirty)" class="aler alert-danger">
-      Staff Number is required
-    </div>
-    </div>
+    </div> -->
+      <mat-form-field appearance="outline">
+        <mat-label><i class="fas fa-user"></i> Staff Number</mat-label>
+        <input 
+          type="text"
+          matInput
+          [formControl]="staffNumber"
+          [errorStateMatcher]="matcher"
+          placeholder="Staff Number"
+        />
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+        <mat-error
+          *ngIf="!staffNumber.hasError('required')"
+        >
+          Please enter a valid staff number
+        </mat-error>
+        <mat-error *ngIf="staffNumber.hasError('required')">
+          Staff Number is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+   
 
-      <div class="input-group  mb-3">
+      <!-- <div class="input-group  mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon2"><i class="fas fa-lock"></i></span>
         </div>
         <input type="password" aria-label="Pin" placeholder="Pin" formControlName="pin" class="form-control" aria-describedby="basic-addon2" [ngClass]="{ 'is-invalid': f.pin.errors && f.pin.touched }" id="pin" required>
-      <div *ngIf="f.pin.errors &&(f.pin.touched || f.pin.dirty)" class="aler alert-danger">
-        Pin is required
-       
-      </div>
+      
 
       
 
       </div>
-      <br/>
+        <div  *ngIf="f.pin.errors &&(f.pin.touched || f.pin.dirty)" class="aler alert-danger">
+          Pin is required
+         
+        </div> -->
+
+        <mat-form-field appearance="outline">
+          <mat-label><i class="fas fa-lock"></i> Pin</mat-label>
+          <input 
+            type="password"
+            matInput
+            [formControl]="pin"
+            [errorStateMatcher]="matcher"
+            placeholder="Pin"
+          />
+          <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+          <mat-error
+            *ngIf="!pin.hasError('required')"
+          >
+            Please enter a valid pin
+          </mat-error>
+          <mat-error *ngIf="pin.hasError('required')">
+            Pin is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      
+      
       <div class="input-group">
         <button class="btn btn-login" type="button" (click)="onSubmit()" [disabled]="!myForm.valid" *ngIf="!loading"><b>LOG IN</b></button>
         <button class="btn btn-login" type="button" *ngIf="loading"><b>Logging in...</b></button>
@@ -64,6 +103,19 @@
         <p>{{error}}</p>
       </div>
     </form>
+
+
+
+
+    
 </div>
 
+
+
+
+
+
+
+
 </div> 
+

@@ -2,7 +2,7 @@
 <div class="charts" *ngIf="dataTitle === 'All'">
   <app-filter-btn></app-filter-btn>
   <br/>
-  <div class="row col-md-12">
+  <div class="row" style="margin: 0;">
     <div class="col-md-4 ">
       <app-gauge-chart></app-gauge-chart>
     </div>
@@ -27,7 +27,7 @@
   <app-application-pipeline></app-application-pipeline>
   <br/>
 
-  <div class="row">
+  <div class="row" style="margin: 0;">
     <div class="col-md-6 ">
       <div  *ngIf="dashboardContainer2Charts.length > 0">
         <mat-card *ngFor="let item of dashboardContainer2Charts" style="height:450px !important">
@@ -78,7 +78,7 @@
 
 </div>
 <p class="txt-app">APPLICANT DEMOGRAPHICS</p>
-<div class="row col-md-12">
+<div class="row" style="margin: 0;">
   
   <div class="col-md-4">
     <div *ngIf="dashboardContainer3Charts.length > 0">

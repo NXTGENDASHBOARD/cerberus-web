@@ -45,7 +45,7 @@ getApps(){
 
         transitionMs: 750,
 
-        majorTicks: 4,
+        majorTicks: 10,
         labelFormat: d3.format('d'),
         labelInset: 10,
 
