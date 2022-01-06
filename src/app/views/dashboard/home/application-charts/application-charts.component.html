@@ -6,8 +6,16 @@
     <div class="col-md-4 ">
       <app-gauge-chart></app-gauge-chart>
     </div>
-    <div class="col-md-8" *ngIf="dashboardCharts.length > 0">   
+    <div class="col-md-8" *ngIf="dashboardCharts.length > 0">
+       
       <mat-card *ngFor="let item of dashboardCharts">
+        <div class="dropdown">
+          <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" (click)="captureBarGraph();"><i class="fas fa-download"></i></a></li>
+          </ul>
+        </div>  <br/><br/>
+        <div id="captureBar">
         <mat-card-title>APPLICATIONS BY FACULTY</mat-card-title>
         <p class="txt-paragraph">Compare applications by Faculty and view the number of completed applications, incomplete applications or applications missing documentation.</p>
         <app-chart
@@ -20,6 +28,7 @@
           (chartClickedEvent)="chartClicked($event)"
         >
         </app-chart>
+      </div>
       </mat-card>
     </div>
   </div>

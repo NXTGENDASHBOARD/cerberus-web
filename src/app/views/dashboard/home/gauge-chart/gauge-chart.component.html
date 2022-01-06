@@ -1,13 +1,25 @@
+<div id="content" #content>
 <mat-card>
-  <mat-card-title>NUMBER OF COMPLETED APPLICATIONS</mat-card-title>
-  <p class="txt-paragraph">This is where you can view the number of completed applications submitted. The diagram shows how close you are to your pre-defined target as well as a % trend from previous measurements.</p>
-    <div class="container">
-        <div id="power-gauge"></div>
-        <!-- &#x2B07; => Down arrow code-->
-        <div class="centered"><span style="font-size: 50px;">{{applications}}</span><br/> <a style="color: #84A59D;" class="arrows-element">&#x2B06; 2%</a></div>
-        <div class="bottom-left">0</div>
-    
-      <div class="bottom-right">500</div>
-      </div>
+  <div class="dropdown">
+    <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li><a class="dropdown-item" (click)="captureScreen();"><i class="fas fa-download"></i></a></li>
+    </ul>
+  </div>
+  <br/><br/>
+  <div id="capture">
+    <mat-card-title>NUMBER OF COMPLETED APPLICATIONS</mat-card-title>
+    <p class="txt-paragraph">This is where you can view the number of completed applications submitted. The diagram shows how close you are to your pre-defined target as well as a % trend from previous measurements.</p>
+      <div class="container">
+          <div id="power-gauge"></div>
+          <!-- &#x2B07; => Down arrow code-->
+          <div class="centered"><span style="font-size: 50px;">{{applications}}</span><br/> <a style="color: #84A59D;" class="arrows-element">&#x2B06; 2%</a></div>
+          <div class="bottom-left">0</div>
+      
+        <div class="bottom-right">500</div>
+        </div>
+  </div>
+  
     </mat-card>
+  </div>
     <br/>   

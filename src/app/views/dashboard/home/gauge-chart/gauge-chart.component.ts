@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as d3 from "d3";
 import { ApplicationService } from 'src/app/_services/application/application.service';
+
+import jspdf from 'jspdf';
+import html2canvas from 'html2canvas';  
 
 @Component({
   selector: 'app-gauge-chart',
@@ -8,6 +11,7 @@ import { ApplicationService } from 'src/app/_services/application/application.se
   styleUrls: ['./gauge-chart.component.scss']
 })
 export class GaugeChartComponent implements OnInit {
+  
   gaugemap = {};
   public applications:any = [];
   constructor(private applicationServive:ApplicationService) { }
@@ -15,6 +19,27 @@ export class GaugeChartComponent implements OnInit {
     this.draw();
     this.getApps();
   }
+  
+  public captureScreen()  
+  {  
+    var data = document.getElementById('capture');  
+    if(data !== null){
+      html2canvas(data).then(canvas => {  
+        // Few necessary setting options  
+        var imgWidth = 208;   
+        var pageHeight = 295;    
+        var imgHeight = canvas.height * imgWidth / canvas.width;  
+        var heightLeft = imgHeight;  
+    
+        const contentDataURL = canvas.toDataURL('image/png')  
+        let pdf = new jspdf('l', 'mm', 'a4'); // A4 size page of PDF  
+        var position = 0;  
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+        pdf.save('Gauge_Chart.pdf'); // Generated PDF   
+      });  
+    }
+    
+  }  
 getApps(){
   this.applicationServive.getApplications().subscribe(x =>{
     console.log(x);
