@@ -3,6 +3,7 @@
     border: grey 2px solid;
     float: right;
     color: white;
+    margin-top: -30px;
 }
 .dropstart{
     float: right;
@@ -13,9 +14,16 @@
 .fa-filter{
     color: white;
 }
-.bott{
-    z-index: 999999;
-}
+.dropdown-menu.show {
+    position: relative !important;
+    clear: both;
+    margin-top: 0;
+    transform: none !important;
+    background: transparent;
+    color: white;
+    width: 50%;
+  }
+  
 .nav{
     width: 30%;
     border: 1px grey solid;

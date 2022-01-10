@@ -6,7 +6,7 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand"><img src="../../../../assets/images/University of AdaptIT logo-01.jpg" width="100"></a>
+      <a class="navbar-brand"><img src="../../../../assets/images/logo.jpg" width="100"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,8 +38,9 @@
       <input type="text" class="form-control" formControlName="staffNumber" placeholder="Staff Number" aria-label="Staff Number" aria-describedby="basic-addon1" [ngClass]="{ 'is-invalid': f.staffNumber.errors && f.staffNumber.touched }">
       
     </div> -->
-      <mat-form-field appearance="outline">
-        <mat-label><i class="fas fa-user"></i> Staff Number</mat-label>
+      <mat-form-field appearance="outline" [floatLabel]="'never'">
+        <!-- <mat-label><i class="fas fa-user"></i> Staff Number</mat-label> -->
+        <mat-icon matPrefix><i class="fas fa-user"></i></mat-icon>
         <input 
           type="text"
           matInput
@@ -75,7 +76,8 @@
         </div> -->
 
         <mat-form-field appearance="outline">
-          <mat-label><i class="fas fa-lock"></i> Pin</mat-label>
+          <!-- <mat-label><i class="fas fa-lock"></i> Pin</mat-label> -->
+          <mat-icon matPrefix><i class="fas fa-lock"></i></mat-icon>
           <input 
             type="password"
             matInput

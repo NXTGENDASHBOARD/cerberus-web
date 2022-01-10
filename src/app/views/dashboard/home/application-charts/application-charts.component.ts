@@ -47,9 +47,13 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
   public chartClicked(e: any): void {
     console.log('clicked from graph');
   }
-  public captureBarGraph()  
+  public capturePie1()  
   {  
-    var data = document.getElementById('captureBar');  
+    var data = document.getElementById('capturePie1');
+    var  hiddenDiv = document.getElementById('dropdownPie1');
+    if(hiddenDiv !==null){
+      hiddenDiv.style.display = 'none';  
+    }  
     if(data !== null){
       html2canvas(data).then(canvas => {  
         // Few necessary setting options  
@@ -59,11 +63,149 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
         var heightLeft = imgHeight;  
     
         const contentDataURL = canvas.toDataURL('image/png')  
-        let pdf = new jspdf('l', 'mm', 'a4'); // A4 size page of PDF  
+        let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+        var position = 0;  
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+        pdf.save('Pie_Chart_App_Gender.pdf'); // Generated PDF   
+      });
+      if(hiddenDiv !==null){
+        hiddenDiv.style.display = 'block';  
+      }
+    }
+    
+  }
+  public capturePie2()  
+  {  
+    var data = document.getElementById('capturePie2');
+    var  hiddenDiv = document.getElementById('dropdownPie2');
+    if(hiddenDiv !==null){
+      hiddenDiv.style.display = 'none';  
+    }  
+    if(data !== null){
+      html2canvas(data).then(canvas => {  
+        // Few necessary setting options  
+        var imgWidth = 208;   
+        var pageHeight = 295;    
+        var imgHeight = canvas.height * imgWidth / canvas.width;  
+        var heightLeft = imgHeight;  
+    
+        const contentDataURL = canvas.toDataURL('image/png')  
+        let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+        var position = 0;  
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+        pdf.save('Pie_Chart_App_location.pdf'); // Generated PDF   
+      });
+      if(hiddenDiv !==null){
+        hiddenDiv.style.display = 'block';  
+      }
+    }
+    
+  }
+  public capturePie()  
+  {  
+    var data = document.getElementById('capturePie');
+    var  hiddenDiv = document.getElementById('dropdownPie');
+    if(hiddenDiv !==null){
+      hiddenDiv.style.display = 'none';  
+    }  
+    if(data !== null){
+      html2canvas(data).then(canvas => {  
+        // Few necessary setting options  
+        var imgWidth = 208;   
+        var pageHeight = 295;    
+        var imgHeight = canvas.height * imgWidth / canvas.width;  
+        var heightLeft = imgHeight;  
+    
+        const contentDataURL = canvas.toDataURL('image/png')  
+        let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+        var position = 0;  
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+        pdf.save('Pie_Chart.pdf'); // Generated PDF   
+      });
+      if(hiddenDiv !==null){
+        hiddenDiv.style.display = 'block';  
+      }
+    }
+    
+  }
+  public captureBarGraph2()  
+  {  
+    var data = document.getElementById('captureBar2');
+    var  hiddenDiv = document.getElementById('dropdownBar2');
+    if(hiddenDiv !==null){
+      hiddenDiv.style.display = 'none';  
+    }  
+    if(data !== null){
+      html2canvas(data).then(canvas => {  
+        // Few necessary setting options  
+        var imgWidth = 208;   
+        var pageHeight = 295;    
+        var imgHeight = canvas.height * imgWidth / canvas.width;  
+        var heightLeft = imgHeight;  
+    
+        const contentDataURL = canvas.toDataURL('image/png')  
+        let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+        var position = 0;  
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+        pdf.save('Bar_Line.pdf'); // Generated PDF   
+      });
+      if(hiddenDiv !==null){
+        hiddenDiv.style.display = 'block';  
+      }
+    }
+    
+  }
+  public captureBarGraph1()  
+  {  
+    var data = document.getElementById('captureBar1');
+    var  hiddenDiv = document.getElementById('dropdownBar1');
+    if(hiddenDiv !==null){
+      hiddenDiv.style.display = 'none';  
+    }  
+    if(data !== null){
+      html2canvas(data).then(canvas => {  
+        // Few necessary setting options  
+        var imgWidth = 208;   
+        var pageHeight = 295;    
+        var imgHeight = canvas.height * imgWidth / canvas.width;  
+        var heightLeft = imgHeight;  
+    
+        const contentDataURL = canvas.toDataURL('image/png')  
+        let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
+        var position = 0;  
+        pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
+        pdf.save('Bar_Chart_App_Type.pdf'); // Generated PDF   
+      });
+      if(hiddenDiv !==null){
+        hiddenDiv.style.display = 'block';  
+      }
+    }
+    
+  }
+  public captureBarGraph()  
+  {  
+    var data = document.getElementById('captureBar');
+    var  hiddenDiv = document.getElementById('dropdownBar');
+    if(hiddenDiv !==null){
+      hiddenDiv.style.display = 'none';  
+    }  
+    if(data !== null){
+      html2canvas(data).then(canvas => {  
+        // Few necessary setting options  
+        var imgWidth = 208;   
+        var pageHeight = 295;    
+        var imgHeight = canvas.height * imgWidth / canvas.width;  
+        var heightLeft = imgHeight;  
+    
+        const contentDataURL = canvas.toDataURL('image/png')  
+        let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
         var position = 0;  
         pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
         pdf.save('Bar_Chart.pdf'); // Generated PDF   
-      });  
+      });
+      if(hiddenDiv !==null){
+        hiddenDiv.style.display = 'block';  
+      }
     }
     
   }  

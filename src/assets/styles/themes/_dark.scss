@@ -33,5 +33,30 @@ html[data-theme="dark"] {
     --mat-toolbar-nav-item-color: #ecf0f1;
 
     // Mat tab 
-  --mat-tab-label-color: #ecf0f1;
+  --mat-tab-label-color: #3e4852;
+
+  .txt-paragraph{
+
+    color: lightgray;
+  }
+  .date{
+
+    color: lightgray;;
+  }
+  .centered{
+    color: lightgray;
+  }
+  .bottom-left{
+    color: lightgray;
+  }
+  .bottom-right{
+    color: lightgray;
+  }
+  .form-select{
+    background: transparent;
+    color: lightgray;
+  }
+  .mat-tab-labels {
+    background: lightgray !important;
+  }
 }

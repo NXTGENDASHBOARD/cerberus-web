@@ -1,8 +1,9 @@
-<!-- <h1>Faculties</h1> -->
-<br/>
+<div class="tab-container">
+  <h1 class="header">Faculties</h1>
 <mat-tab-group
   [selectedIndex]="selected.value"
   (selectedIndexChange)="selected.setValue($event); tabClicked()">
   <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab"> </mat-tab>
 </mat-tab-group>
 <p class="duration">1 Month 12 Days 17 Hours Until Applications Close</p>
+</div>  

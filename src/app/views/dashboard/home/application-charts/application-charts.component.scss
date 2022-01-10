@@ -108,6 +108,10 @@ mat-card-header{
   font-size: 30px;
   font-weight: bold;
 }
+// .my-chart{
+//   width: 70px;
+// height: 40px;
+// }
 @media only screen and (min-width: 960px) {
 .bottom-left {
   position: absolute;
@@ -129,8 +133,25 @@ color: #5F9547;
 text-transform: uppercase;
 opacity: 1;
 font-size: 25px;
+margin: 20px;
 }
-
+.dropdown-menu {
+  min-width: 30px !important;
+  height: 40px !important;
+}
+mat-card-header{
+  text-align: right;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+ul li a{
+  background: transparent;
+}
+ul li a[tabindex]:focus {
+ 
+  outline: none;
+}
 //   .centered {
 //     position: absolute;
 //     top: 47%;

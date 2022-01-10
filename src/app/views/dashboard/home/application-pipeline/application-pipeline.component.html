@@ -1,5 +1,17 @@
-<mat-card>
+
+  <div id="captureApp">
+
+<mat-card >
+  <span class="date">As at 15/12/2021, 1:03PM</span>
+  <div class="dropdown" id="dropdownPipe">
+    <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li><a class="dropdown-item" (click)="captureScreen();"><i class="fas fa-download"></i></a></li>
+    </ul>
+  </div>
   <nav class="navbar navbar-expand-lg">
+    
+
     <a class="navbar-brand">Application pipeline</a>
     
   
@@ -28,7 +40,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-6 col-form-label">Fiter by faculty:</label>
+          <label for="inputEmail3" class="col-sm-6 col-form-label">Filter by faculty:</label>
           <div class="col-sm-6">
             <select class="form-select" aria-label="Default select example">
               <option selected>Select</option>
@@ -42,81 +54,48 @@
     </div>
   </nav>
   <p class="txt-paragraph">View where your applications are sitting in your application pipeline. Too many students stuck on a section may require intervention. The goal is to get applicants through the process as quickly and easily as possible to ensure quality applications.</p>
+  <div class="row row2">
+    <div class="col">
+      <div id="hexagon">
+        <p>1</p>
+        
+      </div>
+      
+    </div>
 
-  <div class="row row1">
-    <div class="col col1">
-     Appication Info
-    </div>
-    <div class="col col1">
-      Qualifying Details
-    </div>
-    <div class="col col1">
-      Aditional Application Info
-      
-    </div>
-    <div class="col col1">
-      Next of Kin and Account Payer Info
-      
+    <div class="col">
+      <div id="hexagon">
+        <p>2</p>
+      </div>
     </div>
     <div class="col">
-      Accomodation Info
-      
+      <div id="hexagon">
+        <p>3</p>
+      </div>
     </div>
     <div class="col">
-      Check and Confirm
-      
+      <div id="hexagon">
+        <p>4</p>
+      </div>
     </div>
-    <div class="col col2">
-      Finish
-      
+    <div class="col">
+      <div id="hexagon">
+        <p>5</p>
+      </div>
+    </div>
+    <div class="col">
+      <div id="hexagon">
+        <p>6</p>
+      </div>
+    </div>
+    <div class="col last">
+      <div id="hexagon">
+        <p>7</p>
+      </div>
     </div>
   
     
-  </div>
-    <div class="row row2">
-      <div class="col">
-        <div id="hexagon">
-          <p>1</p>
-          
-        </div>
-        
-      </div>
-
-      <div class="col">
-        <div id="hexagon">
-          <p>2</p>
-        </div>
-      </div>
-      <div class="col">
-        <div id="hexagon">
-          <p>3</p>
-        </div>
-      </div>
-      <div class="col">
-        <div id="hexagon">
-          <p>4</p>
-        </div>
-      </div>
-      <div class="col">
-        <div id="hexagon">
-          <p>5</p>
-        </div>
-      </div>
-      <div class="col">
-        <div id="hexagon">
-          <p>6</p>
-        </div>
-      </div>
-      <div class="col">
-        <div id="hexagon">
-          <p>7</p>
-        </div>
-      </div>
-    
-      
-    </div>
-      
-      <br>
+  </div> 
     <div id="chart">
         <apx-chart
           [series]="chartOptions.series"
@@ -131,5 +110,39 @@
           [xaxis]="chartOptions.xaxis"
         ></apx-chart>
       </div>
-    </mat-card>
+
+        
+  <div class="row row1">
+    <div class="col col1">
+     Application Info
+    </div>
+    <div class="col col1">
+      Qualifying Details
+    </div>
+    <div class="col col3">
+      Additional Application Info
       
+    </div>
+    <div class="col col4">
+      Next of Kin and Account Payer Info
+      
+    </div>
+    <div class="col col5">
+      Accomodation Info
+      
+    </div>
+    <div class="col col6">
+      Check and Confirm
+      
+    </div>
+    <div class="col col2">
+      Finish
+      
+    </div>
+  
+    
+  </div>
+    
+      
+    </mat-card>
+      </div>  
