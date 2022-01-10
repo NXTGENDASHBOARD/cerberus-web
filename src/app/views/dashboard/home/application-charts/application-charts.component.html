@@ -6,9 +6,10 @@
     <div class="col-md-4 ">
       <app-gauge-chart></app-gauge-chart>
     </div>
-    <div class="col-md-8" *ngIf="dashboardCharts.length > 0" id="captureBar">
+    <div class="col-md-8" *ngIf="dashboardCharts.length > 0" >
        
       <mat-card *ngFor="let item of dashboardCharts">
+        <div id="captureBar">
         <span class="date">As at 15/12/2021, 1:03PM</span>
         <div class="dropdown" id="dropdownBar">
           <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
@@ -30,6 +31,7 @@
         >
         </app-chart>
       </div>
+        </div>
       </mat-card>
     </div>
   </div>
@@ -38,9 +40,10 @@
   <br/>
 
   <div class="row" style="margin: 0;">
-    <div class="col-md-6 " id="captureBar1">
+    <div class="col-md-6 " >
       <div  *ngIf="dashboardContainer2Charts.length > 0">
         <mat-card *ngFor="let item of dashboardContainer2Charts" style="height:450px !important">
+          <div id="captureBar1">
           <span class="date">As at 15/12/2021, 1:03PM</span><br/>
           <div class="dropdown" id="dropdownBar1">
             <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
@@ -60,14 +63,16 @@
           (chartClickedEvent)="chartClicked($event)"
         >
         </app-chart>
+      </div>
         </mat-card>
          
 
       </div>
     </div>
-    <div class="col-md-6 " id="captureBar2">
+    <div class="col-md-6 " >
       <div  *ngIf="dashboardContainer20Charts.length > 0" >
         <mat-card *ngFor="let item of dashboardContainer20Charts" style="height:450px !important">
+          <div id="captureBar2">
           <span class="date">As at 15/12/2021, 1:03PM</span><br/>
           <div class="dropdown" id="dropdownBar2">
             <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
@@ -87,6 +92,7 @@
           (chartClickedEvent)="chartClicked($event)"
         >
         </app-chart>
+      </div>
         </mat-card>
           <br/>
 
@@ -104,8 +110,9 @@
 <div class="row" style="margin: 0;">
   
   <div class="col-md-4">
-    <div *ngIf="dashboardContainer3Charts.length > 0" id="capturePie">
+    <div *ngIf="dashboardContainer3Charts.length > 0" >
       <mat-card *ngFor="let item of dashboardContainer3Charts" style="height:480px !important">
+        <div id="capturePie">
         <span class="date">As at 15/12/2021, 1:03PM</span><br/>
         <div class="dropdown" id="dropdownPie">
           <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
@@ -127,12 +134,14 @@
         >
         </app-chart>
         </div>
+      </div>
        </mat-card>
     </div>
   </div>
   <div class="col-md-4">
-    <div *ngIf="dashboardContainer30Charts.length > 0" id="capturePie1">
+    <div *ngIf="dashboardContainer30Charts.length > 0" >
       <mat-card *ngFor="let item of dashboardContainer30Charts" style="height:480px !important">
+        <div id="capturePie1">
         <span class="date">As at 15/12/2021, 1:03PM</span><br/>
         <div class="dropdown" id="dropdownPie1">
           <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
@@ -153,12 +162,14 @@
           (chartClickedEvent)="chartClicked($event)"
         >
         </app-chart>
+        </div>
       </mat-card>
     </div>
-  </div>
+    </div>
   <div class="col-md-4" >
-    <div *ngIf="dashboardContainer40Charts.length > 0" id="capturePie2">
+    <div *ngIf="dashboardContainer40Charts.length > 0" >
       <mat-card *ngFor="let item of dashboardContainer40Charts" style="height:480px !important">
+        <div id="capturePie2">
         <span class="date">As at 15/12/2021, 1:03PM</span><br/>
         <div class="dropdown" id="dropdownPie2">
           <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
@@ -178,6 +189,7 @@
        (chartClickedEvent)="chartClicked($event)"
      >
      </app-chart>
+    </div>
     </mat-card>
     <br/>
     </div>

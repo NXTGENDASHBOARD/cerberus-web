@@ -89,3 +89,7 @@ mat-card-title{
 ::-webkit-scrollbar-button {
   height: 50px; //for vertical scrollbar
 }
+
+.mat-form-field-prefix .mat-icon, .mat-form-field-suffix .mat-icon {
+  font-size: 15px !important;
+}

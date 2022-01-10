@@ -93,7 +93,7 @@ export class ApplicationPipelineComponent {
       },
       xaxis: {
         labels: {
-          show: true
+          show: false
         },
         categories: ["", "", "", "", "", "", "", "", ""]
       },
@@ -121,10 +121,13 @@ export class ApplicationPipelineComponent {
   {  
     var data = document.getElementById('captureApp');
     var  hiddenDiv = document.getElementById('dropdownPipe');
+    var card = document.getElementById('card');
+  
     if(hiddenDiv !==null){
       hiddenDiv.style.display = 'none';  
     }   
     if(data !== null){
+      
       html2canvas(data).then(canvas => {  
         // Few necessary setting options  
         var imgWidth = 208;   
