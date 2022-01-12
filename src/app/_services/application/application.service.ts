@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { ApplicationModel } from 'src/app/_models';
+import { ApplicationModel, IChart } from 'src/app/_models';
 import { environment } from 'src/environments/environment';
 
 const baseUrl = environment.apiUrl + '/applications';
@@ -10,8 +10,7 @@ const baseUrl = environment.apiUrl + '/applications';
   providedIn: 'root',
 })
 export class ApplicationService {
-  public applications:any = [];
-
+  public subject = new Subject<IChart[]>();
   constructor(private http: HttpClient) {}
 
   // Get All applications
@@ -22,17 +21,11 @@ export class ApplicationService {
   getApplications() {
     return this.http.get(baseUrl);
   }
-  setApps(): Observable<number> {
-    let num = 0;
-    var subject = new Subject<number>();
-    this.getApplications().subscribe(x =>{
-       this.applications = x;
-       num = this.applications.length;
-       subject.next(this.applications.length);
-     // this.single[itemIndex] = this.applications.length;
-    });
-    
-    return subject.asObservable();
+  setApps(object:IChart[]) {
+       this.subject.next(object);
+  }
+  getApps(): Observable<IChart[]> {
+    return this.subject.asObservable();
   }
   getApplicationsGenders() {
     return this.http.get(baseUrl + '/GetApplicantGenderAll');

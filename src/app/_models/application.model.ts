@@ -17,7 +17,7 @@ export interface ApplicationModel {
     isActive: boolean;
     statusId: number;
 }
-export interface IChart {
+export class IChart {
     name:string;
     value:number;
 }

@@ -123,7 +123,7 @@
            <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
           <p class="txt-paragraph">Students demographics are important to maintain as they play an important part in government subsidies as well as adhering to the DHET requirements.</p>
           <mat-card-content class="dashboard-card-content">
-            <ngx-charts-pie-chart [results]="single" [labels]="true" [legend]="true" [legendPosition]="legendPosition" [scheme]="colorScheme">
+            <ngx-charts-pie-chart [view]="view" [results]="raceList" [labels]="true" [legend]="false" [scheme]="colorScheme">
             </ngx-charts-pie-chart>
       </mat-card-content>             
       </div>
@@ -144,7 +144,7 @@
         <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
         <p class="txt-paragraph">Students demographics are important to maintain as they play an important part in government subsidies as well as adhering to the DHET requirements.</p>
         <mat-card-content class="dashboard-card-content">
-          <ngx-charts-pie-chart [results]="gender" [labels]="true" [legend]="true" [legendPosition]="legendPosition" [scheme]="colorScheme">
+          <ngx-charts-pie-chart [view]="view" [results]="genderList" [labels]="true" [legend]="false" [scheme]="color">
           </ngx-charts-pie-chart>
        </mat-card-content>
         </div>

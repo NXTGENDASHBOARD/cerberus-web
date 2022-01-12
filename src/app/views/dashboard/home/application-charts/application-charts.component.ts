@@ -18,46 +18,10 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./application-charts.component.scss'],
 })
 export class ApplicationChartsComponent implements OnInit, OnChanges {
-  single = [
-    {
-      "name": "Black",
-      "value": 8940000
-    },
-    {
-      "name": "Indian",
-      "value": 5000000
-    },
-    {
-      "name": "Coloured",
-      "value": 7200000
-    },
-      {
-      "name": "White",
-      "value": 6200000
-    }
-    ,
-      {
-      "name": "Other",
-      "value": 6200000
-    }
-  ];
-  gender = [
-    {
-      "name": "Male",
-      "value": 8940000
-    },
-    {
-      "name": "Female",
-      "value": 5000000
-    },
-    {
-      "name": "Other",
-      "value": 7200000
-    }
-  ];
+  
   genderList:IChart[] = [];
-  racesList:IChart[];
-  view: any = [700, 400];
+  raceList:IChart[] = []
+  view: any = [400, 300];
 
   // options
   gradient: boolean = true;
@@ -97,18 +61,20 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     this.getGenders();
     this.GetRaces();
     
+    
    
   }
-  getGenders(){
+  GetRaces(){
     this.applicationServive.getApplicationsRaces().subscribe((data:any) =>{
-     
-      console.log(this.genderList);
+      this.raceList = data.map((datum:any) => ({ name: datum.race, value: datum.sum }));
      
     })
   }
-  GetRaces(){
-    this.applicationServive.getApplicationsGenders().subscribe(data =>{
-      console.log(data);
+  getGenders(){
+    this.applicationServive.getApplicationsGenders().subscribe((data:any) =>{
+     
+      this.genderList = data.map((datum:any) => ({ name: datum.gender, value: datum.sum }));
+      
     });
   }
 
