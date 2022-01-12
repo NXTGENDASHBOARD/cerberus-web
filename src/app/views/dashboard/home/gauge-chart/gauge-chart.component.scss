@@ -73,7 +73,15 @@ opacity: 1;
     right: -260px;
   }
 }
-
+.dashboard-card-content {
+  width: 100%;
+  height: calc(100% - 30px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
 
 //   .centered {
 //     position: absolute;

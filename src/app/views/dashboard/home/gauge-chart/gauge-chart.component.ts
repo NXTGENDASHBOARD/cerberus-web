@@ -4,6 +4,8 @@ import { ApplicationService } from 'src/app/_services/application/application.se
 
 import jspdf from 'jspdf';
 import html2canvas from 'html2canvas';  
+import { IChart } from 'src/app/_models';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-gauge-chart',
@@ -11,14 +13,31 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./gauge-chart.component.scss']
 })
 export class GaugeChartComponent implements OnInit {
-  
+  data:IChart[] = [{name:'',value:0}];
+  single:IChart[] = [{name:'',value:1000}];
+  view: any = [500, 300];
+  legend: boolean = true;
+  legendPosition:any = 'below';
+
+  colorScheme :any = {
+    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+  };
+
+
+
   gaugemap = {};
   public applications:any = [];
-  constructor(private applicationServive:ApplicationService) { }
+  constructor(private applicationServive:ApplicationService) {
+    
+    
+  }
     ngOnInit() {
     this.draw();
-    this.getApps();
+    console.log(this.single)
+   console.log(this.getApps()) ;
   }
+  
+  
   
   public captureScreen()  
   {  
@@ -47,12 +66,16 @@ export class GaugeChartComponent implements OnInit {
     }
     
   }  
+
 getApps(){
-  this.applicationServive.getApplications().subscribe(x =>{
-     this.applications = x;
-     this.applications = this.applications.length;
+  let num = 0;
+   this.applicationServive.setApps().subscribe((x) => {
+     num = x
+     console.log(x)
   });
+  return num;
 }
+
   draw() {
      var self:any = this;
     var gauge = function (container:any, configuration:any) {

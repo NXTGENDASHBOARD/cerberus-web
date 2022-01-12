@@ -6,7 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { NgxGaugeType } from 'ngx-gauge/gauge/gauge';
-import { ChartModel, DashboardDataModel, PieChart } from 'src/app/_models';
+import { ChartModel, DashboardDataModel, IChart } from 'src/app/_models';
 import { ApplicationService } from 'src/app/_services/application/application.service';
 import * as d3 from "d3";
 import jspdf from 'jspdf';
@@ -55,8 +55,8 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
       "value": 7200000
     }
   ];
-  genderList:PieChart[] = [];
-  racesList:PieChart[];
+  genderList:IChart[] = [];
+  racesList:IChart[];
   view: any = [700, 400];
 
   // options
@@ -102,12 +102,6 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
   getGenders(){
     this.applicationServive.getApplicationsRaces().subscribe((data:any) =>{
      
-      for(var i = 0;i < data.length;i++){
-        
-        // this.racesList[i].name = data[i].analyticType;
-        // this.racesList[i].value = data[i].sum
-        this.genderList[i].name.push(data[i].analyticType)
-      }
       console.log(this.genderList);
      
     })
