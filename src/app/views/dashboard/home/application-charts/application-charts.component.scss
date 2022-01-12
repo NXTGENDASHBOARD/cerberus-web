@@ -146,6 +146,23 @@ mat-card-header{
   font-size: 30px;
   font-weight: bold;
 }
+::ng-deep .pie-label .animation {
+    margin-top: 10px !important;
+}
+
+:host ::ng-deep {
+ 
+
+  .dashboard-card-content {
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
 ul li a{
   background: transparent;
 }

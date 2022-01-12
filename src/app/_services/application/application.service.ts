@@ -20,7 +20,12 @@ export class ApplicationService {
   getApplications() {
     return this.http.get(baseUrl);
   }
-
+  getApplicationsGenders() {
+    return this.http.get(baseUrl + '/GetApplicantGenderAll');
+  }
+  getApplicationsRaces() {
+    return this.http.get(baseUrl + '/GetApplicantRaceAll');
+  }
   updateShortlistApplication(model: ApplicationModel): Observable<number> {
     return this.http.put<number>(`${baseUrl}/${model.id}`, model);
   }

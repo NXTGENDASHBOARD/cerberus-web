@@ -6,7 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { NgxGaugeType } from 'ngx-gauge/gauge/gauge';
-import { ChartModel, DashboardDataModel } from 'src/app/_models';
+import { ChartModel, DashboardDataModel, PieChart } from 'src/app/_models';
 import { ApplicationService } from 'src/app/_services/application/application.service';
 import * as d3 from "d3";
 import jspdf from 'jspdf';
@@ -18,7 +18,60 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./application-charts.component.scss'],
 })
 export class ApplicationChartsComponent implements OnInit, OnChanges {
-  
+  single = [
+    {
+      "name": "Black",
+      "value": 8940000
+    },
+    {
+      "name": "Indian",
+      "value": 5000000
+    },
+    {
+      "name": "Coloured",
+      "value": 7200000
+    },
+      {
+      "name": "White",
+      "value": 6200000
+    }
+    ,
+      {
+      "name": "Other",
+      "value": 6200000
+    }
+  ];
+  gender = [
+    {
+      "name": "Male",
+      "value": 8940000
+    },
+    {
+      "name": "Female",
+      "value": 5000000
+    },
+    {
+      "name": "Other",
+      "value": 7200000
+    }
+  ];
+  genderList:PieChart[] = [];
+  racesList:PieChart[];
+  view: any = [700, 400];
+
+  // options
+  gradient: boolean = true;
+  showLegend: boolean = true;
+  showLabels: boolean = true;
+  isDoughnut: boolean = false;
+  legendPosition: any = 'below';
+
+  colorScheme:any = {
+    domain: ['#FEC89A', '#84A59D', '#F28482', '#F7EDE2','#808080']
+  };
+  color:any = {
+    domain: ['#84A59D', '#FEC89A', '#F28482']
+  };
 
   @Input() dataTitle: string;
   @Input() dashboardDataModel: DashboardDataModel | undefined;
@@ -41,11 +94,43 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     this.generateApplicationsChartData();
     this.generateApplicationsContainer2ChartDate();
     this.generateApplicationsContainer3ChartDate();
+    this.getGenders();
+    this.GetRaces();
+    
    
+  }
+  getGenders(){
+    this.applicationServive.getApplicationsRaces().subscribe((data:any) =>{
+     
+      for(var i = 0;i < data.length;i++){
+        
+        // this.racesList[i].name = data[i].analyticType;
+        // this.racesList[i].value = data[i].sum
+        this.genderList[i].name.push(data[i].analyticType)
+      }
+      console.log(this.genderList);
+     
+    })
+  }
+  GetRaces(){
+    this.applicationServive.getApplicationsGenders().subscribe(data =>{
+      console.log(data);
+    });
   }
 
   public chartClicked(e: any): void {
     console.log('clicked from graph');
+  }
+  onSelect(data: any): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data: any): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data: any): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
   public capturePie1()  
   {  

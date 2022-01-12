@@ -17,3 +17,7 @@ export interface ApplicationModel {
     isActive: boolean;
     statusId: number;
 }
+export interface PieChart {
+    name:string[];
+    value:number[];
+}

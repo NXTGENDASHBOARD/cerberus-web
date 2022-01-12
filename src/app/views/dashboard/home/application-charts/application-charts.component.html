@@ -122,18 +122,10 @@
         </div>
            <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
           <p class="txt-paragraph">Students demographics are important to maintain as they play an important part in government subsidies as well as adhering to the DHET requirements.</p>
-          <div class="my-chart">
-           <app-chart
-          [chartType]="item.ChartType"
-          [isLegend]="item.isLegend"
-          [chartDatasets]="item.chartDatasets"
-          [chartLabels]="item.chartLabels"
-          [chartColors]="item.chartColors"
-          [chartOptions]="item.chartOptions"
-          (chartClickedEvent)="chartClicked($event)"
-        >
-        </app-chart>
-        </div>
+          <mat-card-content class="dashboard-card-content">
+            <ngx-charts-pie-chart [results]="racesList" [labels]="true" [legend]="true" [legendPosition]="legendPosition" [scheme]="colorScheme">
+            </ngx-charts-pie-chart>
+      </mat-card-content>             
       </div>
        </mat-card>
     </div>
@@ -151,17 +143,10 @@
         </div>
         <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
         <p class="txt-paragraph">Students demographics are important to maintain as they play an important part in government subsidies as well as adhering to the DHET requirements.</p>
-
-        <app-chart
-        [chartType]="item.ChartType"
-        [isLegend]="item.isLegend"
-        [chartDatasets]="item.chartDatasets"
-        [chartLabels]="item.chartLabels"
-        [chartColors]="item.chartColors"
-        [chartOptions]="item.chartOptions"
-          (chartClickedEvent)="chartClicked($event)"
-        >
-        </app-chart>
+        <mat-card-content class="dashboard-card-content">
+          <ngx-charts-pie-chart [results]="gender" [labels]="true" [legend]="true" [legendPosition]="legendPosition" [scheme]="colorScheme">
+          </ngx-charts-pie-chart>
+       </mat-card-content>
         </div>
       </mat-card>
     </div>
