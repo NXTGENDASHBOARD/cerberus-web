@@ -84,7 +84,13 @@ mat-card-title{
   bottom: 155px;
   right: 40px;
 }
-
+.export-btn{
+  width: 10%;
+  float: right;
+  background-color: #5F9547;
+  color: white;
+  border: #5F9547 2px solid;
+}
 .mat-card {
  // margin-right: 1rem;
   border-radius: 20px;
@@ -150,6 +156,7 @@ mat-card-header{
   width: 50%;
   float: right;
 }
+
 .input-group-text{
   background-color: gray;
   color: white;
