@@ -11,7 +11,7 @@ public campuses:any = [];
 showFiller = false;
 up = true;
 down = false;
-count: number = 0;
+count: number = 1;
   constructor(private campusService:CampusService) { }
 
   ngOnInit(): void {

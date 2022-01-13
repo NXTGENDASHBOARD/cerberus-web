@@ -18,7 +18,7 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./application-charts.component.scss'],
 })
 export class ApplicationChartsComponent implements OnInit, OnChanges {
-  
+  isNavigation = false;
   genderList:IChart[] = [];
   raceList:IChart[] = []
   view: any = [400, 300];
@@ -32,91 +32,6 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
 
     // Horizontal bar options
     courseTypes:IChartCourse[] = [];
-    multi = [
-      {
-        "name": "Doctorate",
-        "series": [
-          {
-            "name": "Nr of applications",
-            "value": 7300000
-          },
-          {
-            "name": "Nr of spaces still available",
-            "value": 8940000
-          }
-        ]
-      },
-    
-      {
-        "name": "Masters",
-        "series": [
-          {
-            "name": "Nr of applications",
-            "value": 7870000
-          },
-          {
-            "name": "Nr of spaces still available",
-            "value": 8270000
-          }
-        ]
-      },
-      {
-        "name": "Honours",
-        "series": [
-          {
-            "name": "Nr of applications",
-            "value": 5000002
-          },
-          {
-            "name": "Nr of spaces still available",
-            "value": 5800000
-          }
-        ]
-      }
-      ,
-      {
-        "name": "Bachelor/National Higher Diploma",
-        "series": [
-          {
-            "name": "Nr of applications",
-            "value": 5000002
-          },
-          {
-            "name": "Nr of spaces still available",
-            "value": 5800000
-          }
-        ]
-      }
-      ,
-      {
-        "name": "National Higher Certicate",
-        "series": [
-          {
-            "name": "Nr of applications",
-            "value": 5000002
-          },
-          {
-            "name": "Nr of spaces still available",
-            "value": 5800000
-          }
-        ]
-      }
-      ,
-      {
-        "name": "National Certificate",
-        "series": [
-          {
-            "name": "Nr of applications",
-            "value": 5000002
-          },
-          {
-            "name": "Nr of spaces still available",
-            "value": 5800000
-          }
-        ]
-      }
-     
-    ];
     barView: any = [550, 150];
     showXAxis: boolean = false;
     showYAxis: boolean = true;

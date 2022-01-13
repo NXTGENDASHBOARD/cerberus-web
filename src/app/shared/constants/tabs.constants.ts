@@ -1,5 +1,5 @@
 export const tabs = [
-    'Analytics',
+    'All',
     'Sciences',
     'Commerce',
     'Law',

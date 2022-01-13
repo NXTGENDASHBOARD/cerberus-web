@@ -10,7 +10,7 @@ const baseUrl = environment.apiUrl + '/applications';
   providedIn: 'root',
 })
 export class ApplicationService {
-  public subject = new Subject<IChart[]>();
+  public subject = new Subject<boolean>();
   constructor(private http: HttpClient) {}
 
   // Get All applications
@@ -21,10 +21,10 @@ export class ApplicationService {
   getApplications() {
     return this.http.get(baseUrl);
   }
-  setApps(object:IChart[]) {
+  setState(object:boolean) {
        this.subject.next(object);
   }
-  getApps(): Observable<IChart[]> {
+  getState(): Observable<boolean> {
     return this.subject.asObservable();
   }
   getApplicationsGenders() {
