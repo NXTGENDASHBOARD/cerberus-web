@@ -31,6 +31,15 @@ export class AccountService {
   login(staffNumber: string, pin: string) {
     return this.http
       .post<any>(
+        `${baseUrl}/login`,
+        { staffNumber, pin },
+        { withCredentials: true }
+      );
+   
+  }
+  itslogin(staffNumber: string, pin: string) {
+    return this.http
+      .post<any>(
         `${baseUrl}/itslogin`,
         { staffNumber, pin },
         { withCredentials: true }

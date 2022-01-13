@@ -1,17 +1,21 @@
-
-
-
-
-<div id="bg-image">
-
+<div class="account">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand"><img src="../../../../assets/images/logo.jpg" width="100"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand"
+        ><img src="../../../../assets/images/logo.jpg" width="100"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
-
         <!-- <span class="navbar-text">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -22,72 +26,52 @@
                 </li>
               </ul>
         </span> -->
-        
       </div>
     </div>
   </nav>
-  <div  fxLayout="column">
-    
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-      <div class="center">
-        <h1>WELCOME</h1>
-        <p>Curate courses and manage applications from one place easily</p>
+  <div class="container">
+    <!-- <div class="row">
+      <div class="col-md-8">
+        <div class="center">
+          <h1>WELCOME</h1>
+          <p>Curate courses and manage applications from one place easily</p>
+        </div>
       </div>
+      <div class="col-md-4">
+        <mat-card>
+          <p class="log-heard">Log In</p>
 
-      
-    </div>
-    <div class="col-md-4">
-      <mat-card>
-        <p class="log-heard">Log In</p>
-        <div fxLayout="column">
-          <button class="btn btn-apple" type="button" >SIGN IN WITH APPLE</button>
-        </div>
-        <br/>
-        <div fxLayout="column">
-          <button class="btn btn-google" type="button" >SIGN IN WITH GOOGLE</button>
-          
-        </div>
-        <div class="separator">Or</div>
-        
-        <form class="form-signin" [formGroup]="myForm" >
-          <label for="staffNumber">Staff Number</label>
-          <div  fxLayout="column">
-            
-            <mat-form-field appearance="outline" [floatLabel]="'never'" >
-              <!-- <mat-icon matPrefix><i class="fas fa-user"></i></mat-icon> -->
-              <input  
-                type="text"
-                matInput
-                [formControl]="staffNumber"
-                [errorStateMatcher]="matcher"
-                id="staffNumber"
-              />
-              <mat-error
-                *ngIf="!staffNumber.hasError('required')"
+          <form class="form-signin" [formGroup]="myForm">
+            <label for="staffNumber">Staff Number</label>
+            <div fxLayout="column">
+              <mat-form-field appearance="outline" [floatLabel]="'never'">
+                 <input
+                  type="text"
+                  matInput
+                  [formControl]="staffNumber"
+                  [errorStateMatcher]="matcher"
+                  id="staffNumber"
+                />
+                <mat-error *ngIf="!staffNumber.hasError('required')">
+                  Please enter a valid staff number
+                </mat-error>
+                <mat-error *ngIf="staffNumber.hasError('required')">
+                  Staff Number is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column">
+              <label for="staffNumber" style="text-align: left !important"
+                >Pin</label
               >
-                Please enter a valid staff number
-              </mat-error>
-              <mat-error *ngIf="staffNumber.hasError('required')">
-                Staff Number is <strong>required</strong>
-              </mat-error>
-            </mat-form-field>
-          </div>
-          <div  fxLayout="column">
-            <label for="staffNumber" style="text-align: left !important;">Pin</label>
               <mat-form-field appearance="outline">
-                <!-- <mat-icon matPrefix><i class="fas fa-lock"></i></mat-icon> -->
-                <input 
+                 <input
                   type="password"
                   matInput
                   [formControl]="pin"
                   [errorStateMatcher]="matcher"
-                  
                 />
-                <mat-error
-                  *ngIf="!pin.hasError('required')"
-                >
+                <mat-error *ngIf="!pin.hasError('required')">
                   Please enter a valid pin
                 </mat-error>
                 <mat-error *ngIf="pin.hasError('required')">
@@ -96,27 +80,97 @@
               </mat-form-field>
             </div>
             <div class="input-group">
-              <button class="btn btn-login" type="button" (click)="onSubmit()" [disabled]="!myForm.valid" *ngIf="!loading"><b>LOG IN</b></button>
-              <button class="btn btn-login" type="button" *ngIf="loading"><b>Logging in...</b></button>
+              <button
+                class="btn btn-login"
+                type="button"
+                (click)="onSubmit()"
+                [disabled]="!myForm.valid"
+                *ngIf="!loading"
+              >
+                <b>LOG IN</b>
+              </button>
+              <button class="btn btn-login" type="button" *ngIf="loading">
+                <b>Logging in...</b>
+              </button>
             </div>
             <div class="form-group form-errors">
-              <p>{{error}}</p>
+              <p>{{ error }}</p>
             </div>
           </form>
         </mat-card>
-      
-      
-          
       </div>
+    </div> -->
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="header">
+          <h1 class="heading">
+            <span>Welcome back</span>
+          </h1>
+          <p>Curate courses and manage applications from one place easily</p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="form-container">
+          <div class="form-header">
+            <h1>Log In</h1>
+          </div>
+          <form [formGroup]="myForm">
+            <div class="form-group">
+              <label for="staffNumberInput" class="form-label"
+                >Staff Number</label
+              >
+              <div class="form-input">
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    id="staffNumberInput"
+                    type="number"
+                    formControlName="staffNumber"
+                  />
+                </mat-form-field>
+                <mat-error
+                *ngIf="f.staffNumber.errors && f.staffNumber.touched"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f.staffNumber.errors.required">Staff number is <strong>required</strong></div>
+              </mat-error>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pinInput" class="form-label"
+                >Pin</label
+              >
+              <div class="form-input">
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    id="pinInput"
+                    type="password"
+                    formControlName="pin"
+                  />
+                </mat-form-field>
+                <mat-error
+                *ngIf="f.pin.errors && f.pin.touched"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f.pin.errors.required">Pin is <strong>required</strong></div>
+              </mat-error>
+              </div>
+            </div>
+            <div class="form-group form-actions">
+              <button
+                mat-button
+                class="button primary"
+                (click)="onSubmit()"
+                [disabled]="!myForm.valid"
+              >
+               <span  *ngIf="loading">SIGNING IN..</span>
+               <span  *ngIf="!loading">SIGN IN</span>              
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
-</div> 
-
+</div>

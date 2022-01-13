@@ -1,3 +1,4 @@
+
 .account {
     .container {
         min-height: 100vh;
@@ -66,29 +67,29 @@
             overflow-y: scroll;
             margin: 0 4rem;
             display: block;
-            padding: 1.25rem;
+            padding: 0.625rem;
             padding-top: 1rem;
             padding-bottom: 0.8rem;
             margin-top: 6.25rem;
             border-radius: 0.5rem;
-
+            width: 20rem;
             .form-header {
                 text-align: center;
-                margin-top: 40px;
-                margin-bottom: 32px;
+                margin: 20px 0;
                 h1 {
                     text-transform: capitalize;
+                    font-weight: bold;
                 }
             }
             .third-party {
                 margin-bottom: 24px;
             }
             .google {
-                background: $blue;
+                background: $googleBlue;
                 color: $white;
                 text-transform: uppercase;
                 .mat-button-wrapper {
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 0.85rem;
                 }
             }
@@ -138,7 +139,7 @@
                 a {
                     &.link {
                         text-decoration: none;
-                        font-weight: 400;
+                        font-weight: 500;
                         text-transform: capitalize;
                     }
                 }

@@ -55,8 +55,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.f.staffNumber.value + '' + this.f.pin.value)
-    this.loading = !this.loading;
+     this.loading = !this.loading;
     this.error = '';
     if (this.myForm.invalid) {
       return;
