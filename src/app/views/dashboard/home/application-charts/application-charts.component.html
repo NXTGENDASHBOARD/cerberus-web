@@ -46,23 +46,27 @@
           <div id="captureBar1">
           <span class="date">As at 15/12/2021, 1:03PM</span><br/>
           <div class="dropdown" id="dropdownBar1">
-            <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
+            <mat-card-header class="dropdownBar" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><a class="dropdown-item" (click)="captureBarGraph1();"><i class="fas fa-download"></i></a></li>
             </ul>
           </div>
-          <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+          <mat-card-title>APPLICATION BY COURSE TYPE</mat-card-title>
+          <br/>
           <p class="txt-paragraph">Application by course type is very important as it will impact the government subsidies awarded to the institution. It is important to ensure that all course types meet their target capacity.</p>
-           <app-chart
-          [chartType]="item.ChartType"
-          [isLegend]="item.isLegend"
-          [chartDatasets]="item.chartDatasets"
-          [chartLabels]="item.chartLabels"
-          [chartColors]="item.chartColors"
-          [chartOptions]="item.chartOptions"
-          (chartClickedEvent)="chartClicked($event)"
-        >
-        </app-chart>
+          <ngx-charts-bar-horizontal-stacked
+          [view]="barView"
+          [scheme]="barColorScheme"
+          [results]="courseTypes"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="true"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [legendPosition]="legendPosition"
+          (select)="onSelect($event)">
+        </ngx-charts-bar-horizontal-stacked>
       </div>
         </mat-card>
          
@@ -74,13 +78,24 @@
         <mat-card *ngFor="let item of dashboardContainer20Charts" style="height:450px !important">
           <div id="captureBar2">
           <span class="date">As at 15/12/2021, 1:03PM</span><br/>
+          
           <div class="dropdown" id="dropdownBar2">
-            <mat-card-header role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
+            <mat-card-header class="dropdownBar" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">...</mat-card-header>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><a class="dropdown-item" (click)="captureBarGraph2();"><i class="fas fa-download"></i></a></li>
             </ul>
           </div>
-          <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="basic-addon1">Filter by faculty: </span>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>Select</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <mat-card-title>APPLICANT APS DISTRIBUTION</mat-card-title>
+          <br/>
           <p class="txt-paragraph">This distribution curve shows the quality of student applying to your institution. To ensure the pass rate of the students remains the same, similarly abled students need to be admitted. This graph can also explain and deviations in the previous graph where students may not have the marks required to apply for specific course types.</p>
            <app-chart
           [chartType]="item.ChartType"

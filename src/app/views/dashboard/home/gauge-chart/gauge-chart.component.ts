@@ -64,10 +64,10 @@ export class GaugeChartComponent implements OnInit {
     
   }  
 getApps(){
-  this.applicationServive.getApplications().subscribe((x:any) =>{
+  this.applicationServive.getApplicationsCompleted().subscribe((x:any) =>{
     // 
-   
-        this.single.push({ name: '', value: x.length });
+    console.log(x)
+        this.single.push({ name: '', value: x[0].sum });
 
         this.single = [...this.single];
      console.log(this.single)

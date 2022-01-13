@@ -101,7 +101,7 @@ align-items: center;
 .dropdown-menu {
   min-width: 30px !important;
   height: 40px !important;
-  bottom: 0 !important;
+  top: 0 !important;
 }
 mat-card-header{
   text-align: right;
@@ -146,10 +146,20 @@ mat-card-header{
   font-size: 30px;
   font-weight: bold;
 }
+.input-group-sm{
+  width: 50%;
+  float: right;
+}
+.input-group-text{
+  background-color: gray;
+  color: white;
+}
 ::ng-deep .pie-label .animation {
     margin-top: 10px !important;
 }
-
+.dropdownBar{
+  margin-top: -30px;
+}
 :host ::ng-deep {
  
 

@@ -6,7 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { NgxGaugeType } from 'ngx-gauge/gauge/gauge';
-import { ChartModel, DashboardDataModel, IChart } from 'src/app/_models';
+import { ChartModel, DashboardDataModel, IChart, IChartCourse } from 'src/app/_models';
 import { ApplicationService } from 'src/app/_services/application/application.service';
 import * as d3 from "d3";
 import jspdf from 'jspdf';
@@ -29,6 +29,104 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
   showLabels: boolean = true;
   isDoughnut: boolean = false;
   legendPosition: any = 'below';
+
+    // Horizontal bar options
+    courseTypes:IChartCourse[] = [];
+    multi = [
+      {
+        "name": "Doctorate",
+        "series": [
+          {
+            "name": "Nr of applications",
+            "value": 7300000
+          },
+          {
+            "name": "Nr of spaces still available",
+            "value": 8940000
+          }
+        ]
+      },
+    
+      {
+        "name": "Masters",
+        "series": [
+          {
+            "name": "Nr of applications",
+            "value": 7870000
+          },
+          {
+            "name": "Nr of spaces still available",
+            "value": 8270000
+          }
+        ]
+      },
+      {
+        "name": "Honours",
+        "series": [
+          {
+            "name": "Nr of applications",
+            "value": 5000002
+          },
+          {
+            "name": "Nr of spaces still available",
+            "value": 5800000
+          }
+        ]
+      }
+      ,
+      {
+        "name": "Bachelor/National Higher Diploma",
+        "series": [
+          {
+            "name": "Nr of applications",
+            "value": 5000002
+          },
+          {
+            "name": "Nr of spaces still available",
+            "value": 5800000
+          }
+        ]
+      }
+      ,
+      {
+        "name": "National Higher Certicate",
+        "series": [
+          {
+            "name": "Nr of applications",
+            "value": 5000002
+          },
+          {
+            "name": "Nr of spaces still available",
+            "value": 5800000
+          }
+        ]
+      }
+      ,
+      {
+        "name": "National Certificate",
+        "series": [
+          {
+            "name": "Nr of applications",
+            "value": 5000002
+          },
+          {
+            "name": "Nr of spaces still available",
+            "value": 5800000
+          }
+        ]
+      }
+     
+    ];
+    barView: any = [550, 150];
+    showXAxis: boolean = false;
+    showYAxis: boolean = true;
+    showXAxisLabel: boolean = true;
+    yAxisLabel: string = 'Country';
+    showYAxisLabel: boolean = true;
+    xAxisLabel: string = 'Population';
+    barColorScheme:any = {
+      domain: ['#84A59D', '#FEC89A']
+    };
 
   colorScheme:any = {
     domain: ['#FEC89A', '#84A59D', '#F28482', '#F7EDE2','#808080']
@@ -60,6 +158,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     this.generateApplicationsContainer3ChartDate();
     this.getGenders();
     this.GetRaces();
+    this.GetCourseTypes();
     
     
    
@@ -68,6 +167,15 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
     this.applicationServive.getApplicationsRaces().subscribe((data:any) =>{
       this.raceList = data.map((datum:any) => ({ name: datum.race, value: datum.sum }));
      
+    })
+  }
+  GetCourseTypes(){
+    this.applicationServive.getApplicationsCourseType().subscribe((data:any) =>{
+      data.forEach((element:any) => {
+        this.courseTypes.push({name:element.course,series:element.courseSeries})
+      });
+     this.courseTypes = [...this.courseTypes];
+     console.log(this.courseTypes)
     })
   }
   getGenders(){

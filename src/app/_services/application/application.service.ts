@@ -33,6 +33,12 @@ export class ApplicationService {
   getApplicationsRaces() {
     return this.http.get(baseUrl + '/GetApplicantRaceAll');
   }
+  getApplicationsCourseType() {
+    return this.http.get(baseUrl + '/GetApplicantCourseTypeAll');
+  }//
+  getApplicationsCompleted() {
+    return this.http.get(baseUrl + '/GetApplicationsCompleted');
+  }
   updateShortlistApplication(model: ApplicationModel): Observable<number> {
     return this.http.put<number>(`${baseUrl}/${model.id}`, model);
   }

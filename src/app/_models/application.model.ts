@@ -21,3 +21,7 @@ export class IChart {
     name:string;
     value:number;
 }
+export class IChartCourse {
+    name:string;
+    series:{name:string,value:number};
+}
