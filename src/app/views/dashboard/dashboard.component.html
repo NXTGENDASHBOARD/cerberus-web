@@ -12,10 +12,10 @@
     /></mat-toolbar>
 
     <mat-nav-list>
-      <div class="profile">
+      <div class="profile" *ngIf="account">
         <h1>
-          Hi, Johanthen Spen!
-          <span>Role: Admin</span>
+          Hi, {{account.firstName}}!
+          <span>Role: {{account.roles[0].roleName}}</span>
         </h1>
       </div>
     </mat-nav-list>
@@ -46,10 +46,10 @@
         </div>
       </mat-list-item>
       <mat-list-item>
-        <a routerLink="/analytics" routerLinkActive="active-link">
+        <button (click)="logout()" routerLinkActive="active-link">
           <img src="assets/images/icons/power.svg" alt="Power off svg icon" />
           <p>Log Out</p>
-        </a>
+        </button>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>

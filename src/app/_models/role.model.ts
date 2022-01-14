@@ -3,4 +3,5 @@ export interface Role {
     descr: string;
     acceslevel: string;
     accesCode: string;
+    roleName: string;
 }
