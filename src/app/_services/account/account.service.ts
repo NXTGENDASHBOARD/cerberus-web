@@ -37,12 +37,13 @@ export class AccountService {
       );
    
   }
+
   itslogin(staffNumber: string, pin: string) {
     return this.http
       .post<any>(
         `${baseUrl}/itslogin`,
         { staffNumber, pin },
-        { withCredentials: true }
+        { withCredentials: environment.withCredentials }
       );
    
   }

@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  // apiUrl: "http://nxtgen.dedicated.co.za/api",
+  apiUrl: "http://nxtgen.dedicated.co.za/api",
 
-  apiUrl: "http://localhost:5001/api"
+  // apiUrl: "http://localhost:5001/api",
+  withCredentials: false
 };
 
 /*

@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
 
     setTimeout(() => {
       this.accountService
-        .login(this.f.staffNumber.value, this.f.pin.value)
+        .itslogin(this.f.staffNumber.value, this.f.pin.value)
         .subscribe((data: any) => {
           this.loading = !this.loading;
 
