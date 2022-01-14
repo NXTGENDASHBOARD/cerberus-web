@@ -7,7 +7,9 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-  <mat-toolbar><img src="../../../assets/images/logo.jpg" width="100"></mat-toolbar>
+    <mat-toolbar
+      ><img src="assets/images/logo.jpg" width="100" style="margin: 0 auto"
+    /></mat-toolbar>
 
     <mat-nav-list>
       <a
@@ -16,7 +18,7 @@
         routerLinkActive="active-link"
         [routerLinkActiveOptions]="{ exact: true }"
         >Applications</a
-      >   
+      >
       <a
         mat-list-item
         routerLink="/analytics/short-list"
@@ -24,16 +26,17 @@
         >Admission Status</a
       >
     </mat-nav-list>
-    <br />
+    <mat-divider></mat-divider>
+
     <mat-nav-list>
       <hr />
-      <!-- <a mat-list-item routerLink="/analytics/" routerLinkActive="active-link"
+      <a mat-list-item routerLink="/analytics/" routerLinkActive="active-link"
         >Profile</a
-      > -->
+      >
       <div class="set-theme">
-        Set Dark &nbsp;
+        Dark Theme &nbsp;
         <mat-slide-toggle [(ngModel)]="dark"> </mat-slide-toggle>
-      </div>      
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
