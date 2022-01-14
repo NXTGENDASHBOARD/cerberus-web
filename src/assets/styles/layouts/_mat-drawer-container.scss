@@ -3,19 +3,65 @@
   background-color: var(--mat-drawer-bg);
   color: var(--mat-drawer-color);
 
+  .mat-nav-list {
+    .profile {
+      text-align: center;
+      h1 {
+        font-size: 14px;
+        font-weight: 600;
+
+        width: 6rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0 auto;
+
+        span {
+          display: block;
+          font-size: 10px;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+    }
+  }
+
   .mat-list-base .mat-list-item {
     color: var(--mat-drawer-color);
+   
     font-weight: 400;
-    font-size: 14px;
+    margin-top: 1.5rem;
+    img,
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+    a {
+      font-weight: 400;
+      font-size: 12px;
+      p {
+        font-weight: 400;
+        font-size: 12px;
+      }
+     
+    }
 
     .mat-list-item-content {
-      display: inherit;
-      padding: 1rem 0.5rem;
+      display: inherit; 
       text-align: center;
     }
   }
   .active-link {
     // TODO Implement active route styles.
+  }
+
+  .mat-nav-list {
+    &.settings {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      
+    }
   }
 }
 .mat-drawer-container {

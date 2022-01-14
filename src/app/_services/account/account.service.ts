@@ -45,7 +45,7 @@ export class AccountService {
       );   
   }
 
-  
+
   register(model: Register): Observable<number> {
     return this.http.post<number>(`${baseUrl}/register`, model);
   }
@@ -71,7 +71,7 @@ export class AccountService {
   logout() {
     this.accountSubject.next(null);
     this.http.post(`${baseUrl}/logout`,{});
-    this.router.navigate(['/sign-in']);    
+    this.router.navigate(['']);    
   }
 
 }

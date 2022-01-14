@@ -73,10 +73,9 @@ export class LoginComponent implements OnInit {
             console.table(account);
             this.router.navigate(['analytics']);
           } else {
-            this.error = data;
-            
+            this.error = data;            
           }
         });
-    }, 1000);
+    }, 0);
   }
 }
