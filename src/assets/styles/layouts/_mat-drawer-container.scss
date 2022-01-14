@@ -36,9 +36,14 @@
       display: block;
       margin: 0 auto;
     }
+    button {
+      background: transparent;
+      color: var(--mat-drawer-color);
+    }
     a {
       font-weight: 400;
       font-size: 12px;
+      cursor: pointer;
       p {
         font-weight: 400;
         font-size: 12px;
@@ -60,7 +65,7 @@
       position: absolute;
       bottom: 1rem;
       width: 100%;
-      
+
     }
   }
 }
