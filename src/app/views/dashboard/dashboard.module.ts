@@ -8,6 +8,7 @@ import { ApplicationPipelineComponent } from './home/application-pipeline/applic
 import { GaugeChartComponent } from './home/gauge-chart/gauge-chart.component';
 import { FilterBtnComponent } from './home/filter-btn/filter-btn.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ApplicationLocationComponent } from './home/application-location/application-location.component';
 
 
    
@@ -16,7 +17,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     ...declarations,
     ApplicationPipelineComponent,
     GaugeChartComponent,
-    FilterBtnComponent, 
+    FilterBtnComponent,
+    ApplicationLocationComponent, 
    ],
   imports: [
     IMPORT_MODULES,
