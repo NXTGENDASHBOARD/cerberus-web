@@ -1,7 +1,7 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ThemeService } from 'src/app/_services';
+import { AccountService, ThemeService } from 'src/app/_services';
 import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +18,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private accountService: AccountService
   ) {}
   ngOnInit(): void {}
   
@@ -28,5 +29,9 @@ export class DashboardComponent implements OnInit {
 
   set dark(enable: boolean) {
     this.themeService.theme = enable ? 'dark' : 'light';
+  }
+
+  logout(){
+    this.accountService.logout();
   }
 }

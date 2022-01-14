@@ -10,9 +10,7 @@ export class Account {
     password?: string;
     fullName: string;
     isVerified: boolean;
-    role: RoleEnum;
-    jwtToken?: string;
-  
+    role: RoleEnum;   
 
     names?: string;
     surname?: string;
@@ -20,3 +18,36 @@ export class Account {
     roles: Role[];
  }
 
+
+ export interface Register {
+    firstName?: string;
+    surname?: string;
+    email?: string;
+    phoneNumber?: string;
+    password?: string;
+    isThirdParty?: boolean;
+    thirdPartyProvider?: any;
+    roleType?: string;
+    createUserId?: string;
+    modifyUserId?: string;
+    isActive?: boolean;
+    statusId?: number;
+  }
+  
+  export interface Login {
+    email?: string;
+    password?: string;
+  }
+  
+  export interface IdpLogin {
+    email?: string; 
+  }
+  
+  export interface AccountVerificationRequest {
+    email?: string; 
+  }
+  
+  export interface AccountVerificationOtp {
+    otpVerification?: string; 
+  }
+  

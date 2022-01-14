@@ -1,6 +1,5 @@
 // dark theme here
 html[data-theme="dark"] {
-
   // variables
   --bg: #2c3a47;
   --bg-panel: #3e4852;
@@ -15,44 +14,45 @@ html[data-theme="dark"] {
   --form-field-bg: #3e4852;
   --form-field-label-color: #95a5a6;
 
-   // Side nav colors
-   --mat-drawer-bg: #5F9547;
-   --mat-drawer-color: #bdc3c7;
+  // Side nav colors
+  --mat-drawer-bg: #5f9547;
+  --mat-drawer-color: #ecf0f1;
 
-   --mat-drawer-container-bg: #2c3a47;
+  --mat-drawer-container-bg: #2c3a47;
 
-   
-    // Card colors
-    --mat-card-bg:#3e4852;
-    --mat-card-color:#ecf0f1;
+  // Card colors
+  --mat-card-bg: #3e4852;
+  --mat-card-color: #ecf0f1;
 
-    // Font colors
-    --container-fluid-h1-color:  #ecf0f1;
+  // Font colors
+  --container-fluid-h1-color: #ecf0f1;
 
-    // Mat toolbar
-    --mat-toolbar-nav-item-color: #ecf0f1;
+  // Mat toolbar
+  --mat-toolbar-nav-item-color: #ecf0f1;
 
-    // Mat tab 
+  // Mat tab
   --mat-tab-label-color: #3e4852;
 
-  .txt-paragraph{
+  // Data table card
+  --data-table-card-header: #2ecc71;
+  --data-table-card-label: #2ecc71;
 
+  .txt-paragraph {
     color: lightgray;
   }
-  .date{
-
-    color: lightgray;;
-  }
-  .centered{
+  .date {
     color: lightgray;
   }
-  .bottom-left{
+  .centered {
     color: lightgray;
   }
-  .bottom-right{
+  .bottom-left {
     color: lightgray;
   }
-  .form-select{
+  .bottom-right {
+    color: lightgray;
+  }
+  .form-select {
     background: transparent;
     color: lightgray;
   }
