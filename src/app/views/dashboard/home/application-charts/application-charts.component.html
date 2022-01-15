@@ -38,12 +38,11 @@
   </div>
     <br/>
   <app-application-pipeline></app-application-pipeline>
-  <br/>
 </div>  
   <div class="row" style="margin: 0;">
     <div class="col-md-6 " >
       <div  *ngIf="dashboardContainer2Charts.length > 0">
-        <mat-card *ngFor="let item of dashboardContainer2Charts" style="height:450px !important">
+        <mat-card *ngFor="let item of dashboardContainer2Charts" style="height:480px !important">
           <div id="captureBar1">
           <span class="date">As at 15/12/2021, 1:03PM</span><br/>
           <div class="dropdown" id="dropdownBar1">
@@ -76,7 +75,7 @@
     </div>
     <div class="col-md-6 " >
       <div  *ngIf="dashboardContainer20Charts.length > 0" >
-        <mat-card *ngFor="let item of dashboardContainer20Charts" style="height:450px !important">
+        <mat-card *ngFor="let item of dashboardContainer20Charts" style="height:480px !important">
           <div id="captureBar2">
           <span class="date">As at 15/12/2021, 1:03PM</span><br/>
           
@@ -179,16 +178,7 @@
         </div>
         <mat-card-title>{{item.chartDatasets[0].label}}</mat-card-title>
         <p class="txt-paragraph">This graph shows the distribution of applicants by location. Applicants who are located in a different region to the institution may need to be catered for in terms of accommodation.</p>
-        <app-chart
-       [chartType]="item.ChartType"
-       [isLegend]="item.isLegend"
-       [chartDatasets]="item.chartDatasets"
-       [chartLabels]="item.chartLabels"
-       [chartColors]="item.chartColors"
-       [chartOptions]="item.chartOptions"
-       (chartClickedEvent)="chartClicked($event)"
-     >
-     </app-chart>
+        <app-application-location></app-application-location>
     </div>
     </mat-card>
     <br/>

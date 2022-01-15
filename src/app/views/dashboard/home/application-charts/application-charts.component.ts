@@ -32,7 +32,7 @@ export class ApplicationChartsComponent implements OnInit, OnChanges {
 
     // Horizontal bar options
     courseTypes:IChartCourse[] = [];
-    barView: any = [550, 150];
+    barView: any = [550, 250];
     showXAxis: boolean = false;
     showYAxis: boolean = true;
     showXAxisLabel: boolean = true;

@@ -1,0 +1,128 @@
+/* SVG MAPS */
+
+#map_SouthAfrica{
+    transform: scale(1);
+    height: 250px;
+    margin: 20px;
+}
+
+#region_Lesotho{
+    fill: #fff; 
+}
+
+#region_EasternCape{
+
+}
+
+
+#region_FreeState{
+
+}
+
+#region_Gauteng{
+
+}
+
+#region_Limpopo{
+
+}
+
+#region_Mpumalanga{
+
+}
+
+#region_NorthernCape{
+
+}
+
+#region_KwaZuluNatal{
+
+}
+
+#region_NorthWest{
+
+}
+
+#region_WestCape{
+
+}
+
+.mapsvg-region{
+    fill: #CBA041;
+    stroke: #e9ecef;
+    stroke-width: 0.695315px;
+    transition: all 0.3s;
+}
+
+.mapsvg-region:hover{
+    fill: #f3b90c;
+    stroke-width: 2px;
+}
+line:hover{
+    fill: #f3b90c;
+    stroke-width: 2px;
+}
+.map_container{
+    
+    width: 300px;
+    height: 287px;
+    display: flex;
+    margin: 0 auto;
+   
+   
+}
+text{
+    font-size: 20px;
+}
+
+/* LINES */
+.svg_line_easternCape{
+    position: absolute;
+    z-index: 1; 
+    width: 95px;
+}
+.svg_line_limpopo{
+    position: absolute;
+    z-index: 1;
+    padding: 10px !important;
+    margin-top: -100px;
+    margin-right: 39px;
+    right: -156px;
+    width: 65px;
+    transform: rotate(74deg);
+}
+.svg_line_gauteng{
+    position: absolute;
+    z-index: 1;
+    padding: 10px !important;
+    margin-top: -100px;
+    margin-right: 39px;
+    right: -156px;
+    width: 65px;
+    transform: rotate(45deg);
+}
+
+/* LABELS */
+.lable_Container_easternCape{
+    position: absolute;
+}
+
+.lable_Percent{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 40px;
+    text-align: left;
+    color: #1b4a58;
+}
+
+.lable_SubScriptTitle{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    color: #1b4a58;
+}
