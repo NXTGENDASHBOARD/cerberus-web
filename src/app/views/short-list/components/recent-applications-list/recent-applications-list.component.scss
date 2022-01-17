@@ -68,7 +68,8 @@
     padding: 2rem 1rem;
     border-radius: 4px;
     margin: 1rem 0;
-    background: $white;
+    background: var(--mat-card-bg);
+ 
     display: grid;
     grid-template-columns: repeat(5, 20%);
 
@@ -81,18 +82,18 @@
         .header {
             font-size: 1.5rem;
             font-weight: 600;
-            color: $primary;
+            color: var(--data-table-card-header);
         }
 
         .data {
             font-size: 1rem;
-            color: #7A7979;
+            color: var(--mat-card-color);
             margin: 0;
         }
 
         .label {
             font-size: 1rem;
-            color: #5F9547;
+            color: var(--data-table-card-label);
             margin: 0;
         }
 

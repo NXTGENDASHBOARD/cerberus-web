@@ -7,7 +7,7 @@ import { ThemeService } from './_services';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { NgApexchartsModule } from "ng-apexcharts";
+import { NgApexchartsModule } from 'ng-apexcharts';
 import { metaReducers, reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -25,12 +25,10 @@ import { EffectsModule } from '@ngrx/effects';
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     SHARED_MODULES,
-    NgApexchartsModule
+    NgApexchartsModule,
   ],
   providers: [
     ThemeService,
-    // TODO: When we get to tokenization management with ITS 4.1 APi integration
-    // { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],

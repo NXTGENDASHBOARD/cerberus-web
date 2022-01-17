@@ -4,7 +4,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { Account } from 'src/app/_models';
+import { Account, Login } from 'src/app/_models';
 import { AccountService } from 'src/app/_services';
 
 
@@ -55,29 +55,29 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.f.staffNumber.value + '' + this.f.pin.value)
-    this.loading = !this.loading;
+     this.loading = !this.loading;
     this.error = '';
     if (this.myForm.invalid) {
       return;
     }
 
+    const model : Login = {
+      staffNumber:this.f.staffNumber.value,
+      pin: this.f.pin.value
+    };
+
     setTimeout(() => {
       this.accountService
-        .login(this.f.staffNumber.value, this.f.pin.value)
+        .login(model)
         .subscribe((data: any) => {
           this.loading = !this.loading;
-
-          if (data != null) {
-            const account = data as Account;
-            sessionStorage.setItem('Account', JSON.stringify(account));
-            console.table(account);
+          const account = data as Account;    
+          if (account != null) {        
             this.router.navigate(['analytics']);
           } else {
-            this.error = data;
-            
+            this.error = data;            
           }
         });
-    }, 1000);
+    }, 500);
   }
 }
